@@ -9,8 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="Office Click-To-Run Configuration XML Editor" />
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
-    
-    <script type="text/javascript" src="vkbeautify.0.99.00.beta.js"></script>
+
+    <script type="text/javascript" src="./Scripts/vkbeautify.0.99.00.beta.js"></script>
+
 
     <!--[if lt IE 9]>
       <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -22,10 +23,11 @@
     <!-- CSS code from Bootply.com editor -->
 
     <style type="text/css">
-        .navbar-static-top {
-            margin-bottom: 20px;
-            background-color: #dc3c00;
-        }
+        
+         .navbar-static-top {
+             margin-bottom: 20px;
+             background-color: #dc3c00;
+         }
 
         i {
             font-size: 16px;
@@ -60,15 +62,10 @@
         }
 
         #cbProduct {
-           
-
         }
 
         #cbEdition {
-           
-
         }
-
     </style>
 </head>
 
@@ -83,7 +80,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                
+
                 <table cellspacing="0" cellpadding="0">
                     <tr>
                         <td>
@@ -97,9 +94,7 @@
 
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-
-                </ul>
+                <ul class="nav navbar-nav navbar-right"></ul>
             </div>
         </div>
         <!-- /container -->
@@ -111,10 +106,9 @@
         <div class="row">
             <!-- /col-3 -->
             <div class="col-sm-12">
-
                 <div class="row">
-                    <!-- center left-->
-                    <div class="col-md-5">
+
+                    <div class="col-md-5" style="min-width: 600px">
                         <!--tabs-->
                         <div class="panel">
                             <ul class="nav nav-tabs" id="myTab">
@@ -125,20 +119,19 @@
                                 <li><a href="#logging" data-toggle="tab">Logging</a></li>
                             </ul>
                             <div class="tab-content">
-                                
+
                                 <!-- Add Product-->
                                 <div class="tab-pane active well" id="profile">
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
                                             <div class="panel-title">
-                                                <i class="glyphicon glyphicon-wrench pull-right"></i>
                                                 <h4>Add Product</h4>
                                             </div>
                                         </div>
 
                                         <div class="panel-body">
                                             <form class="form form-vertical">
-                                                
+
                                                 <div class="control-group" style="padding-top: 5px;">
                                                     <label>Product</label>
                                                     <div class="controls">
@@ -151,7 +144,7 @@
                                                         </select>
                                                     </div>
                                                 </div>
-                                                
+
                                                 <div class="control-group" style="padding-top: 5px;">
                                                     <label>Edition</label>
                                                     <div class="controls">
@@ -164,61 +157,70 @@
 
                                                 <div class="control-group" style="padding-top: 5px;">
                                                     <label>Language</label>
-                                                    <div class="controls">
-                                                        <div style="float: left; width: 78%;">
-                                                            <select id="cbLanguage" class="form-control">
-                                                                <option value="en-us">English (en-us)</option>
-                                                                <option value="ar-sa">Arabic (ar-sa)</option>
-                                                                <option value="bg-bg">Bulgarian (bg-bg)</option>
-                                                                <option value="zh-cn">Chinese (Simplified) (zh-cn)</option>
-                                                                <option value="zh-tw">Chinese (zh-tw)</option>
-                                                                <option value="hr-hr">Croatian (hr-hr)</option>
-                                                                <option value="cs-cz">Czech (cs-cz)</option>
-                                                                <option value="da-dk">Danish (da-dk)</option>
-                                                                <option value="nl-nl">Dutch (nl-nl)</option>
-                                                                <option value="et-ee">Estonian (et-ee)</option>
-                                                                <option value="fi-fi">Finnish (fi-fi)</option>
-                                                                <option value="fr-fr">French (fr-fr)</option>
-                                                                <option value="de-de">German (de-de)</option>
-                                                                <option value="el-gr">Greek (el-gr)</option>
-                                                                <option value="he-il">Hebrew (he-il)</option>
-                                                                <option value="hi-in">Hindi (hi-in)</option>
-                                                                <option value="hu-hu">Hungarian (hu-hu)</option>
-                                                                <option value="id-id">Indonesian (id-id)</option>
-                                                                <option value="it-it">Italian (it-it)</option>
-                                                                <option value="ja-jp">Japanese (ja-jp)</option>
-                                                                <option value="kk-kh">Kazakh (kk-kh)</option>
-                                                                <option value="ko-kr">Korean (ko-kr)</option>
-                                                                <option value="lv-lv">Latvian (lv-lv)</option>
-                                                                <option value="lt-lt">Lithuanian (lt-lt)</option>
-                                                                <option value="ms-my">Malay (ms-my)</option>
-                                                                <option value="nb-no">Norwegian (Bokm�l) (nb-no)</option>
-                                                                <option value="pl-pl">Polish (pl-pl)</option>
-                                                                <option value="pt-br">Portuguese (pt-br)</option>
-                                                                <option value="pt-pt">Portuguese (pt-pt)</option>
-                                                                <option value="ro-ro">Romanian (ro-ro)</option>
-                                                                <option value="ru-ru">Russian (ru-ru)</option>
-                                                                <option value="sr-latn-rs">Serbian (Latin) (sr-latn-rs)</option>
-                                                                <option value="sk-sk">Slovak (sk-sk)</option>
-                                                                <option value="sl-si">Slovenian (sl-si)</option>
-                                                                <option value="es-es">Spanish (es-es)</option>
-                                                                <option value="sv-se">Swedish (sv-se)</option>
-                                                                <option value="th-th">Thai (th-th)</option>
-                                                                <option value="tr-tr">Turkish (tr-tr)</option>
-                                                                <option value="uk-ua">Ukrainian (uk-ua)</option>
-                                                            </select>
+                                                    <div class="controls" style="min-width: 500px; overflow: auto;">
+                                                        <div style="float: left; width: 100%">
+                                                            <table >
+                                                                <tr>
+                                                                    <td style="width: 100%; padding-right: 10px">
+                                                                        <select id="cbLanguage" class="form-control">
+                                                                            <option value="en-us">English (en-us)</option>
+                                                                            <option value="ar-sa">Arabic (ar-sa)</option>
+                                                                            <option value="bg-bg">Bulgarian (bg-bg)</option>
+                                                                            <option value="zh-cn">Chinese (Simplified) (zh-cn)</option>
+                                                                            <option value="zh-tw">Chinese (zh-tw)</option>
+                                                                            <option value="hr-hr">Croatian (hr-hr)</option>
+                                                                            <option value="cs-cz">Czech (cs-cz)</option>
+                                                                            <option value="da-dk">Danish (da-dk)</option>
+                                                                            <option value="nl-nl">Dutch (nl-nl)</option>
+                                                                            <option value="et-ee">Estonian (et-ee)</option>
+                                                                            <option value="fi-fi">Finnish (fi-fi)</option>
+                                                                            <option value="fr-fr">French (fr-fr)</option>
+                                                                            <option value="de-de">German (de-de)</option>
+                                                                            <option value="el-gr">Greek (el-gr)</option>
+                                                                            <option value="he-il">Hebrew (he-il)</option>
+                                                                            <option value="hi-in">Hindi (hi-in)</option>
+                                                                            <option value="hu-hu">Hungarian (hu-hu)</option>
+                                                                            <option value="id-id">Indonesian (id-id)</option>
+                                                                            <option value="it-it">Italian (it-it)</option>
+                                                                            <option value="ja-jp">Japanese (ja-jp)</option>
+                                                                            <option value="kk-kh">Kazakh (kk-kh)</option>
+                                                                            <option value="ko-kr">Korean (ko-kr)</option>
+                                                                            <option value="lv-lv">Latvian (lv-lv)</option>
+                                                                            <option value="lt-lt">Lithuanian (lt-lt)</option>
+                                                                            <option value="ms-my">Malay (ms-my)</option>
+                                                                            <option value="nb-no">Norwegian (Bokm�l) (nb-no)</option>
+                                                                            <option value="pl-pl">Polish (pl-pl)</option>
+                                                                            <option value="pt-br">Portuguese (pt-br)</option>
+                                                                            <option value="pt-pt">Portuguese (pt-pt)</option>
+                                                                            <option value="ro-ro">Romanian (ro-ro)</option>
+                                                                            <option value="ru-ru">Russian (ru-ru)</option>
+                                                                            <option value="sr-latn-rs">Serbian (Latin) (sr-latn-rs)</option>
+                                                                            <option value="sk-sk">Slovak (sk-sk)</option>
+                                                                            <option value="sl-si">Slovenian (sl-si)</option>
+                                                                            <option value="es-es">Spanish (es-es)</option>
+                                                                            <option value="sv-se">Swedish (sv-se)</option>
+                                                                            <option value="th-th">Thai (th-th)</option>
+                                                                            <option value="tr-tr">Turkish (tr-tr)</option>
+                                                                            <option value="uk-ua">Ukrainian (uk-ua)</option>
+                                                                        </select>
+                                                                    </td>
+                                                                    <td style="width: 150px;text-align: right; padding-right: 10px">
+                                                                        <button id="btAddLanguage" class="btn btn-primary">
+                                                                            Add
+                                                                        </button>
+                                                                    </td>
+                                                                    <td style="width:80px;text-align: right">
+                                                                        <button id="btRemoveLanguage" class="btn btn-primary" disabled="true">
+                                                                            Remove
+                                                                        </button>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
                                                         </div>
-                                                        <div style="float: left; width: 22%; padding-left:10px; ">
-                                                            <button id="btAddLanguage" class="btn btn-primary">
-                                                                Add
-                                                            </button>
-                                                            <button id="btRemoveLanguage" class="btn btn-primary" disabled="true">
-                                                                Remove
-                                                            </button>
-                                                        </div>
+ 
                                                     </div>
                                                 </div>
-                                                
+
                                                 <br />
 
                                                 <div class="control-group" style="padding-top: 5px;">
@@ -227,6 +229,9 @@
                                                         <button id="btAddProduct" class="btn btn-primary">
                                                             Add Product
                                                         </button>
+                                                        <button id="btRemoveProduct" class="btn btn-primary">
+                                                            Delete Product
+                                                        </button>
                                                     </div>
                                                 </div>
                                             </form>
@@ -234,7 +239,7 @@
 
                                         <!--/panel content-->
                                     </div>
-                                    
+
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
                                             <div class="panel-title">
@@ -244,7 +249,7 @@
 
                                         <div class="panel-body">
                                             <form class="form form-vertical">
-                                                
+
                                                 <div class="control-group">
                                                     <label>Version</label>
                                                     <div class="controls">
@@ -266,41 +271,53 @@
                                                     </div>
                                                 </div>
                                                 
+
                                                 <div class="control-group" style="padding-top: 5px;">
                                                     <label>Exclude Office Programs</label>
-                                                    <div style="float: left; width: 78%;">
-                                                        <select id="cbExcludeApp" class="form-control">
-                                                            <option value="Access">Access</option>
-                                                            <option value="Excel">Excel</option>
-                                                            <option value="Groove">Groove</option>
-                                                            <option value="InfoPath">InfoPath</option>
-                                                            <option value="Lync">Lync</option>
-                                                            <option value="OneNote">OneNote</option>
-                                                            <option value="Outlook">Outlook</option>
-                                                            <option value="PowerPoint">PowerPoint</option>
-                                                            <option value="Project">Project</option>
-                                                            <option value="Publisher">Publisher</option>
-                                                            <option value="SharePointDesigner">SharePointDesigner</option>
-                                                            <option value="Visio">Visio</option>
-                                                            <option value="Word">Word</option>
-                                                        </select>
-                                                    </div>
-                                                    <div style="float: left; width: 22%; padding-left:10px; ">
-                                                        <button id="btAddExcludeApp" class="btn btn-primary">
-                                                            Add
-                                                        </button>
-                                                        <button id="btRemoveExcludeApp" class="btn btn-primary" disabled="true">
-                                                            Remove
-                                                        </button>
+                                                    <div class="controls" style="min-width: 500px; overflow: auto;">
+                                                        <div style="float: left; width: 100%">
+                                                            <table>
+                                                                <tr>
+                                                                    <td style="width: 100%; padding-right: 10px">
+                                                                        <select id="cbExcludeApp" class="form-control">
+                                                                            <option value="Access">Access</option>
+                                                                            <option value="Excel">Excel</option>
+                                                                            <option value="Groove">Groove</option>
+                                                                            <option value="InfoPath">InfoPath</option>
+                                                                            <option value="Lync">Lync</option>
+                                                                            <option value="OneNote">OneNote</option>
+                                                                            <option value="Outlook">Outlook</option>
+                                                                            <option value="PowerPoint">PowerPoint</option>
+                                                                            <option value="Project">Project</option>
+                                                                            <option value="Publisher">Publisher</option>
+                                                                            <option value="SharePointDesigner">SharePointDesigner</option>
+                                                                            <option value="Visio">Visio</option>
+                                                                            <option value="Word">Word</option>
+                                                                        </select>
+                                                                    </td>
+                                                                    <td style="width: 150px;text-align: right; padding-right: 10px">
+                                                                        <button id="btAddExcludeApp" class="btn btn-primary">
+                                                                            Add
+                                                                        </button>
+                                                                    </td>
+                                                                    <td style="width:80px;text-align: right">
+                                                                        <button id="btRemoveExcludeApp" class="btn btn-primary" disabled="true">
+                                                                            Remove
+                                                                        </button>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+
                                                     </div>
                                                 </div>
-                                                
+
                                                 <br />
 
                                                 <div class="control-group">
                                                     <label></label>
                                                     <div class="controls">
-                                    
+
                                                     </div>
                                                 </div>
                                             </form>
@@ -310,9 +327,9 @@
                                     </div>
 
                                 </div>
-                                
+
                                 <!-- Remove Product-->
-                                <div class="tab-pane well" id="removeproduct" >
+                                <div class="tab-pane well" id="removeproduct">
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
                                             <div class="panel-title">
@@ -322,14 +339,14 @@
 
                                         <div class="panel-body">
                                             <form class="form form-vertical">
-                                                
+
                                                 <div class="btn-group btn-group-justified" style="width:300px">
-                                                    <a id="removeAllProducts" href="#" class="btn btn-primary col-sm-3 active" onclick="toggleRemove(this);">
+                                                    <button id="removeAllProducts" type="button" class="btn btn-default" onclick="toggleRemove(this.id);">
                                                         Remove All
-                                                    </a>
-                                                    <a id="removeSelectProducts" href="#" class="btn col-sm-3" onclick="toggleRemove(this);">
+                                                    </button>
+                                                    <button id="removeSelectProducts" type="button" class="btn btn-default" onclick="toggleRemove(this.id);">
                                                         Remove Select
-                                                    </a>
+                                                    </button>
                                                 </div>
 
                                                 <div class="control-group" style="padding-top: 5px;">
@@ -344,7 +361,7 @@
                                                         </select>
                                                     </div>
                                                 </div>
-                                                
+
                                                 <div class="control-group" style="padding-top: 5px;">
                                                     <label>Language</label>
                                                     <div class="controls">
@@ -418,10 +435,10 @@
                                         <!--/panel content-->
                                     </div>
                                 </div>
-                                
+
                                 <!-- Updates-->
                                 <div class="tab-pane well" id="updates">
-                                   
+
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
                                             <div class="panel-title">
@@ -431,16 +448,16 @@
 
                                         <div class="panel-body">
                                             <form class="form form-vertical">
-                                                
+
                                                 <div class="btn-group btn-group-justified" style="width:300px">
-                                                    <a id="btupdatesEnabled" href="#" class="btn btn-primary col-sm-3 active" onclick="toggleUpdatesEnabled(this);">
+                                                    <button id="btupdatesEnabled" type="button" class="btn btn-default" onclick="toggleUpdatesEnabled(this.id);">
                                                         Enabled
-                                                    </a>
-                                                    <a id="btupdatesDisabled" href="#" class="btn col-sm-3" onclick="toggleUpdatesEnabled(this);">
+                                                    </button>
+                                                    <button id="btupdatesDisabled" type="button" class="btn btn-default" onclick="toggleUpdatesEnabled(this.id);">
                                                         Disabled
-                                                    </a>
+                                                    </button>
                                                 </div>
-                                                
+
                                                 <br />
 
                                                 <div class="control-group">
@@ -486,10 +503,10 @@
                                     </div>
 
                                 </div>
-                                
+
                                 <!-- Display-->
                                 <div class="tab-pane well" id="display">
-                                    
+
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
                                             <div class="panel-title">
@@ -499,29 +516,29 @@
 
                                         <div class="panel-body">
                                             <form class="form form-vertical">
-                                                
+
                                                 <label>Level</label>
                                                 <div class="btn-group btn-group-justified" style="width:300px">
-                                                  
-                                                    <a id="btLevelNone" href="#" class="btn btn-primary col-sm-2 active" onclick="toggleDisplayLevelEnabled(this);">
+
+                                                    <button id="btLevelNone" type="button" class="btn btn-default" onclick="toggleDisplayLevelEnabled(this.id);">
                                                         None
-                                                    </a>
-                                                    <a id="btLevelFull" href="#" class="btn col-sm-2" onclick="toggleDisplayLevelEnabled(this);">
+                                                    </button>
+                                                    <button id="btLevelFull" type="button" class="btn btn-default" onclick="toggleDisplayLevelEnabled(this.id);">
                                                         Full
-                                                    </a>
+                                                    </button>
                                                 </div>
-                                                
+
                                                 <br />
-                                                
+
                                                 <label>AcceptEULA</label>
                                                 <div class="btn-group btn-group-justified" style="width:300px">
-                                             
-                                                    <a id="btAcceptEULAEnabled" href="#" class="btn btn-primary col-sm-2 active" onclick="toggleDisplayEULAEnabled(this);">
+
+                                                    <button id="btAcceptEULAEnabled" type="button" class="btn btn-default" onclick="toggleDisplayEULAEnabled(this.id);">
                                                         True
-                                                    </a>
-                                                    <a id="btAcceptEULADisabled" href="#" class="btn col-sm-2" onclick="toggleDisplayEULAEnabled(this);">
+                                                    </button>
+                                                    <button id="btAcceptEULADisabled" type="button" class="btn btn-default" onclick="toggleDisplayEULAEnabled(this.id);">
                                                         False
-                                                    </a>
+                                                    </button>
                                                 </div>
 
                                                 <br />
@@ -544,10 +561,10 @@
                                     </div>
 
                                 </div>
-                                
+
                                 <!-- Logging-->
                                 <div class="tab-pane well" id="logging">
-                                    
+
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
                                             <div class="panel-title">
@@ -561,18 +578,18 @@
                                                 <label>Level</label>
                                                 <div class="btn-group btn-group-justified" style="width:300px">
 
-                                                    <a id="btLoggingLevelOff" href="#" class="btn btn-primary col-sm-2 active" onclick="toggleLoggingEnabled(this);">
+                                                    <button id="btLoggingLevelOff" type="button" class="btn btn-default" onclick="toggleLoggingEnabled(this.id);">
                                                         Off
-                                                    </a>
-                                                    <a id="btLoggingLevelStandard" href="#" class="btn col-sm-2" onclick="toggleLoggingEnabled(this);">
+                                                    </button>
+                                                    <button id="btLoggingLevelStandard" type="button" class="btn btn-default" onclick="toggleLoggingEnabled(this.id);">
                                                         Standard
-                                                    </a>
+                                                    </button>
                                                 </div>
 
                                                 <br />
 
                                                 <div class="control-group">
-                                                    <label>UpdatePath</label>
+                                                    <label>Path</label>
                                                     <div class="controls">
                                                         <input id="txtLoggingUpdatePath" type="text" class="form-control" placeholder="">
                                                     </div>
@@ -604,30 +621,49 @@
                         </div>
                         <!--/tabs-->
                     </div>
-                    <!--/col-->
+
                     <div class="col-md-7">
                         <div class="panel panel-default" id="xmlViewerPane">
                             <div class="panel-heading">
-                                <h4>XML Viewer</h4>
+                                <table width="100%">
+                                    <tr>
+                                        <td>
+                                            <h4>XML Viewer</h4>
+                                        </td>
+                                        <td>
+                                            <form id="text-options">
+                                                <input type="button" value="Download" onclick="download()">
+                                            </form>
+                                        </td>
+                                        <td style="width:250px">
+                                            Upload an Existing Configuration File
+                                        </td>
+                                        <td style="width:200px">
+                                            <input type="file" id="fileInput" size="10">
+                                        </td>
+
+                                    </tr>
+                                </table>
+
+
                             </div>
                             <div class="panel-body">
-                                <textarea id="xmlText" style="width:100%;height:600px;font-size:20px" rows="3" placeholder="" readonly="true"></textarea>
+                                <textarea id="xmlText" style="width:100%; min-height: 400px;font-size:20px" rows="3" placeholder=""></textarea>
                             </div>
+
                         </div>
                     </div>
-                    <!--/col-span-6-->
 
                 </div>
-                
-
             </div>
-            
+
         </div>
     </div>
-    
+
 
     <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type='text/javascript' src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./Scripts/FileSaver.js"></script>
 
 
     <!-- JavaScript jQuery code from Bootply.com editor  -->
@@ -636,6 +672,34 @@
 
         $(document).ready(function () {
 
+            var fileInput = document.getElementById('fileInput');
+
+            fileInput.addEventListener('change', function (e) {
+                // Put the rest of the demo code here.
+
+                var control = document.getElementById('fileInput');
+
+                var i = 0,
+                files = control.files;
+                var file = files[i];
+
+                var reader = new FileReader();
+
+                reader.onload = function (event) {
+                    var contents = event.target.result;
+                    var xmlOutput = vkbeautify.xml(contents);
+                    $('textarea#xmlText').val(xmlOutput);
+
+                    loadUploadXmlFile();
+                };
+
+                reader.onerror = function (event) {
+                    throw "File could not be read! Code " + event.target.error.code;
+                };
+
+                reader.readAsText(file);
+            });
+
             resizeWindow();
 
             $(window).resize(function () {
@@ -643,6 +707,12 @@
             });
 
             $(".alert").addClass("in").fadeOut(4500);
+
+            $('#txtPidKey').keyup(function () {
+
+                validatePidKey(this);
+
+            });
 
             /* swap open/close side menu icons */
             $('[data-toggle=collapse]').click(function () {
@@ -653,7 +723,19 @@
             $("#btAddProduct").button().click(function () {
                 var xmlDoc = getXmlDocument();
 
-                odtAddProduct(xmlDoc);               
+                odtAddProduct(xmlDoc);
+
+                displayXml(xmlDoc);
+
+                $("#btAddProduct").text('Edit Product');
+
+                return false;
+            });
+
+            $("#btRemoveProduct").button().click(function () {
+                var xmlDoc = getXmlDocument();
+
+                odtRemoveProduct(xmlDoc);
 
                 displayXml(xmlDoc);
 
@@ -682,19 +764,7 @@
 
             $("#cbProduct").change(function () {
                 var end = this.value;
-                var productId = $('#cbProduct').val();
-
-                var xmlDoc = getXmlDocument();
-
-                var productNode = getProductNode(xmlDoc, productId);
-                if (productNode) {
-                    $("#btAddProduct").text('Edit Product');
-                } else {
-                    $("#btAddProduct").text('Add Product');
-                }
-
-                var langCount = getLanguageNodeCount(xmlDoc, productId);
-                $("#btRemoveLanguage").prop("disabled", !(langCount > 1));
+                changeSelectedProduct();
             });
 
             $("#btAddExcludeApp").button().click(function () {
@@ -714,7 +784,7 @@
                 displayXml(xmlDoc);
                 return false;
             });
-            
+
             $("#btAddRemoveProduct").button().click(function () {
                 var xmlDoc = getXmlDocument();
 
@@ -798,21 +868,229 @@
 
         });
 
+        function download() {
+            var xmlDoc = getXmlDocument();
+            var xmlString = (new XMLSerializer().serializeToString(xmlDoc.documentElement));
+            var xmlOutput = vkbeautify.xml(xmlString);
+
+            xmlOutput = xmlOutput.replace(/\n/g, "\r\n");
+
+            var blob = new Blob([xmlOutput], { type: "text/xml" });
+            saveAs(blob, "configuration.xml");
+        }
+
+        function validatePidKey(t) {
+            //if (!this.value.match(/[0-9]/)) {
+            //    this.value = this.value.replace(/[^0-9]/g, '');
+            //}
+
+            var currentText = t.value;
+            if (currentText.length > 5) {
+
+                var firstPart = "";
+                var secondPart = "";
+
+                var dash1 = currentText.substring(5, 6);
+                if (dash1 != "-") {
+                    var firstPart = currentText.substring(0, 5);
+                    var restPart = currentText.substring(5, currentText.length);
+
+                    firstPart = firstPart + "-" + restPart;
+                    t.value = firstPart;
+                }
+
+                var dash2 = currentText.substring(10, 11);
+                if (dash2 != "-") {
+                    var firstPart2 = currentText.substring(10, 15);
+                    var restPart2 = currentText.substring(10, currentText.length);
+
+                    secondPart = firstPart2 + "-" + restPart2;
+                    t.value = firstPart + secondPart;
+                }
+            }
+        }
+
+        function changeSelectedProduct() {
+            var productId = $('#cbProduct').val();
+
+            var xmlDoc = getXmlDocument();
+
+            $("#txtPidKey").val("");
+
+            var productNode = getProductNode(xmlDoc, productId);
+            if (productNode) {
+                $("#btAddProduct").text('Edit Product');
+                $("#btRemoveProduct").prop("disabled", false);
+
+                var pidKey = productNode.getAttribute("PIDKEY");
+                if (pidKey) {
+                    $("#txtPidKey").val(pidKey);
+                }
+
+                var excludeApps = productNode.getElementsByTagName("ExcludeApp");
+                if (excludeApps.length == 0) {
+                    $("#btRemoveExcludeApp").prop("disabled", true);
+                    $("select#cbExcludeApp").prop('selectedIndex', 0);
+                } else {
+                    $("#btRemoveExcludeApp").prop("disabled", false);
+
+                    var excludeApp = excludeApps[0];
+                    if (excludeApp) {
+                        $("#cbExcludeApp").val(excludeApp.getAttribute("ID"));
+                    }
+                }
+
+            } else {
+                $("#btAddProduct").text('Add Product');
+                $("#btRemoveProduct").prop("disabled", true);
+                $("#btRemoveExcludeApp").prop("disabled", true);
+                $("select#cbExcludeApp").prop('selectedIndex', 0);
+            }
+
+            var langCount = getLanguageNodeCount(xmlDoc, productId);
+            $("#btRemoveLanguage").prop("disabled", !(langCount > 1));
+        }
+
+        function loadUploadXmlFile() {
+            var xmlDoc = getXmlDocument();
+
+            var addNode = null;
+            var nodes = xmlDoc.documentElement.getElementsByTagName("Add");
+            if (nodes.length > 0) {
+                addNode = xmlDoc.documentElement.getElementsByTagName("Add")[0];
+
+                var selectBitness = addNode.getAttribute("OfficeClientEdition");
+                $("#cbEdition").val(selectBitness);
+
+                var products = addNode.getElementsByTagName("Product");
+                if (products.length > 0) {
+                    var product = products[0];
+                    var productId = product.getAttribute("ID");
+
+                    $("#cbProduct").val(productId);
+
+                    var pidKey = product.getAttribute("PIDKEY");
+                    $("#txtPidKey").val(pidKey);
+
+                    var exApps = product.getElementsByTagName("ExcludeApp");
+                    if (exApps.length > 0) {
+                        var exApp = exApps[0];
+                        var excludeAppId = exApp.getAttribute("ID");
+                        $("#cbExcludeApp").val(excludeAppId);
+
+                        $("#btRemoveExcludeApp").prop("disabled", false);
+                    } else {
+                        $("#btRemoveExcludeApp").prop("disabled", true);
+                    }
+                }
+
+                var version = addNode.getAttribute("Version");
+                $("#txtVersion").val(version);
+
+                var version = addNode.getAttribute("SourcePath");
+                $("#txtSourcePath").val(version);
+            }
+
+            var removeNode = null;
+            var remvoeNodes = xmlDoc.documentElement.getElementsByTagName("Remove");
+            if (remvoeNodes.length > 0) {
+                removeNode = xmlDoc.documentElement.getElementsByTagName("Remove")[0];
+                if (removeNode) {
+                    var removeProducts = removeNode.getElementsByTagName("Product");
+                    if (removeProducts.length > 0) {
+                        var removeproduct = removeProducts[0];
+                        var removeproductId = removeproduct.getAttribute("ID");
+
+                        $("#cbRemoveProduct").val(removeproductId);
+
+                        var removeLangs = removeproduct.getElementsByTagName("Language");
+                        if (removeLangs.length > 0) {
+                            var removeLangId = removeLangs[0].getAttribute("ID");
+                            $("#cbRemoveLanguage").val(removeLangId);
+                        }
+
+                        toggleRemove("removeSelectProducts");
+                    } else {
+                        toggleRemove("removeallproducts");
+                    }
+                }
+            }
+
+            var updateNodes = xmlDoc.documentElement.getElementsByTagName("Update");
+            if (updateNodes.length > 0) {
+                var updateNode = xmlDoc.documentElement.getElementsByTagName("Update")[0];
+
+                var updatesEnabled = updateNode.getAttribute("Enabled");
+                var selectUpdatePath = updateNode.getAttribute("UpdatePath");
+                var selectTargetVersion = updateNode.getAttribute("TargetVersion");
+                var selectDeadline = updateNode.getAttribute("Deadline");
+
+                if (updatesEnabled == "TRUE") {
+                    toggleUpdatesEnabled("btupdatesEnabled");
+                    $("#txtUpdatePath").val(selectUpdatePath);
+                    $("#txtTargetVersion").val(selectTargetVersion);
+                    $("#txtDeadline").val(selectDeadline);
+                } else {
+                    toggleUpdatesEnabled("btupdatesDisabled");
+                    $("#txtUpdatePath").val("");
+                    $("#txtTargetVersion").val("");
+                    $("#txtDeadline").val("");
+                }
+            }
+
+            var displayNodes = xmlDoc.documentElement.getElementsByTagName("Display");
+            if (displayNodes.length > 0) {
+                var displayNode = xmlDoc.documentElement.getElementsByTagName("Display")[0];
+
+                var logLevel = displayNode.getAttribute("Level");
+                var acceptEula = displayNode.getAttribute("AcceptEULA");
+
+                if (logLevel == "None") {
+                    toggleDisplayLevelEnabled("btLevelNone");
+                } else {
+                    toggleDisplayLevelEnabled("btLevelFull");
+                }
+
+                if (acceptEula == "TRUE") {
+                    toggleDisplayEULAEnabled("btAcceptEULAEnabled");
+                } else {
+                    toggleDisplayEULAEnabled("btAcceptEULADisabled");
+                }
+            }
+
+            var loggingNodes = xmlDoc.documentElement.getElementsByTagName("Logging");
+            if (loggingNodes.length > 0) {
+                var loggingNode = xmlDoc.documentElement.getElementsByTagName("Logging")[0];
+
+                var logLevel = loggingNode.getAttribute("Level");
+                var path = loggingNode.getAttribute("Path");
+
+                if (logLevel == "Off") {
+                    toggleLoggingEnabled("btLoggingLevelOff");
+                } else {
+                    toggleLoggingEnabled("btLoggingLevelStandard");
+                }
+
+                $("#txtLoggingUpdatePath").val(path);
+            }
+
+        }
+
         function resizeWindow() {
             var bodyHeight = window.innerHeight;
             var bodyWidth = window.innerWidth;
             var leftPaneHeight = bodyHeight - 180;
 
-            $("#mainDiv").height(bodyHeight - 70);
+            //$("#mainDiv").height(bodyHeight - 70);
 
-            $("#removeproduct").height(leftPaneHeight);
-            $("#profile").height(leftPaneHeight);
-            $("#updates").height(leftPaneHeight);
-            $("#display").height(leftPaneHeight);
-            $("#logging").height(leftPaneHeight);
+            //$("#removeproduct").height(leftPaneHeight);
+            //$("#profile").height(leftPaneHeight);
+            //$("#updates").height(leftPaneHeight);
+            //$("#display").height(leftPaneHeight);
+            //$("#logging").height(leftPaneHeight);
 
             var rightPaneHeight = bodyHeight - 100;
-            $("#xmlText").height(rightPaneHeight - 100);
+            //$("#xmlText").height(rightPaneHeight - 100);
 
         }
 
@@ -879,7 +1157,7 @@
             var langCount = getLanguageNodeCount(xmlDoc, selectedProduct);
             $("#btRemoveLanguage").prop("disabled", !(langCount > 1));
         }
-        
+
 
         function odtAddRemoveLanguage(xmlDoc) {
             var selectedProduct = $("#cbRemoveProduct").val();
@@ -987,7 +1265,7 @@
                 if (existingAddProduct) {
                     addNode.removeChild(existingAddProduct);
                 }
-                
+
                 if (addNode.childElementCount == 0) {
                     xmlDoc.documentElement.removeChild(addNode);
                 }
@@ -995,7 +1273,7 @@
 
         }
 
-        
+
         function odtAddExcludeApp(xmlDoc) {
             var selectedProduct = $("#cbProduct").val();
             var selectExcludeApp = $("#cbExcludeApp").val();
@@ -1034,7 +1312,7 @@
             var selectExcludeApp = $("#cbExcludeApp").val();
 
             var addNode = null;
-     
+
             var nodes = xmlDoc.documentElement.getElementsByTagName("Add");
             if (nodes.length > 0) {
                 addNode = xmlDoc.documentElement.getElementsByTagName("Add")[0];
@@ -1149,11 +1427,32 @@
                 if (existingRemoveProduct) {
                     removeNode.removeChild(existingRemoveProduct);
                 }
-                
+
                 if (removeNode.childElementCount == 0) {
                     xmlDoc.documentElement.removeChild(removeNode);
                 }
             }
+        }
+
+        function odtRemoveProduct(xmlDoc) {
+            var selectedProduct = $("#cbProduct").val();
+
+            var addNode = null;
+
+            var nodes = xmlDoc.documentElement.getElementsByTagName("Add");
+            if (nodes.length > 0) {
+                addNode = xmlDoc.documentElement.getElementsByTagName("Add")[0];
+
+                var productNode = getProductNode(addNode, selectedProduct);
+                if (productNode) {
+                    addNode.removeChild(productNode);
+                }
+            }
+
+            //$("#removeAllProducts").removeClass('btn-primary');
+            //$("#removeSelectProducts").removeClass('btn-primary');
+            //$("#removeAllProducts").removeClass('active');
+            //$("#removeSelectProducts").removeClass('active');
         }
 
 
@@ -1162,40 +1461,48 @@
             var selectTargetVersion = $("#txtTargetVersion").val();
             var selectDeadline = $("#txtDeadline").val();
 
-            var addNode = xmlDoc.createElement("Update");
-            var nodes = xmlDoc.documentElement.getElementsByTagName("Update");
-            if (nodes.length > 0) {
-                addNode = xmlDoc.documentElement.getElementsByTagName("Update")[0];
-            } else {
-                xmlDoc.documentElement.appendChild(addNode);
-            }
+            var $btUpdatesEnabled = $("#btupdatesEnabled");
+            var $btUpdatesDisabled = $("#btupdatesDisabled");
 
-            var $removeSelect = $("#btupdatesEnabled");
-            if ($removeSelect.hasClass('btn-primary')) {
-                addNode.setAttribute("Enabled", "TRUE");
-            } else {
-                addNode.setAttribute("Enabled", "FALSE");
-                addNode.removeAttribute("UpdatePath");
-                addNode.removeAttribute("TargetVersion");
-                addNode.removeAttribute("Deadline");
-            }
+            if ($btUpdatesEnabled.hasClass('btn-primary') || $btUpdatesDisabled.hasClass('btn-primary')) {
 
-            if (selectUpdatePath) {
-                addNode.setAttribute("UpdatePath", selectUpdatePath);
-            } else {
-                addNode.removeAttribute("UpdatePath");
-            }
+                var addNode = xmlDoc.createElement("Update");
+                var nodes = xmlDoc.documentElement.getElementsByTagName("Update");
+                if (nodes.length > 0) {
+                    addNode = xmlDoc.documentElement.getElementsByTagName("Update")[0];
+                } else {
+                    xmlDoc.documentElement.appendChild(addNode);
+                }
 
-            if (selectTargetVersion) {
-                addNode.setAttribute("TargetVersion", selectTargetVersion);
-            } else {
-                addNode.removeAttribute("TargetVersion");
-            }
+                if (selectUpdatePath) {
+                    addNode.setAttribute("UpdatePath", selectUpdatePath);
+                } else {
+                    addNode.removeAttribute("UpdatePath");
+                }
 
-            if (selectDeadline) {
-                addNode.setAttribute("Deadline", selectDeadline);
-            } else {
-                addNode.removeAttribute("Deadline");
+                if (selectTargetVersion) {
+                    addNode.setAttribute("TargetVersion", selectTargetVersion);
+                } else {
+                    addNode.removeAttribute("TargetVersion");
+                }
+
+                if (selectDeadline) {
+                    addNode.setAttribute("Deadline", selectDeadline);
+                } else {
+                    addNode.removeAttribute("Deadline");
+                }
+
+                if ($btUpdatesEnabled.hasClass('btn-primary')) {
+                    addNode.setAttribute("Enabled", "TRUE");
+                }
+
+                if ($btUpdatesDisabled.hasClass('btn-primary')) {
+                    addNode.setAttribute("Enabled", "FALSE");
+                    addNode.removeAttribute("UpdatePath");
+                    addNode.removeAttribute("TargetVersion");
+                    addNode.removeAttribute("Deadline");
+                }
+
             }
         }
 
@@ -1208,6 +1515,15 @@
                     xmlDoc.documentElement.removeChild(addNode);
                 }
             }
+
+            $("#btupdatesDisabled").removeClass('btn-primary');
+            $("#btupdatesEnabled").removeClass('btn-primary');
+            $("#btupdatesDisabled").removeClass('active');
+            $("#btupdatesEnabled").removeClass('active');
+
+            $("#txtUpdatePath").prop("disabled", true);
+            $("#txtTargetVersion").prop("disabled", true);
+            $("#txtDeadline").prop("disabled", true);
         }
 
 
@@ -1220,7 +1536,7 @@
                 xmlDoc.documentElement.appendChild(addNode);
             }
 
-            var $displayLevelNone= $("#btLevelNone");
+            var $displayLevelNone = $("#btLevelNone");
             if ($displayLevelNone.hasClass('btn-primary')) {
                 addNode.setAttribute("Level", "None");
             } else {
@@ -1229,7 +1545,7 @@
 
             var $AcceptEulaEnabled = $("#btAcceptEULAEnabled");
             if ($AcceptEulaEnabled.hasClass('btn-primary')) {
-                addNode.setAttribute("AcceptEULA", "TRUE ");
+                addNode.setAttribute("AcceptEULA", "TRUE");
             } else {
                 addNode.setAttribute("AcceptEULA", "FALSE");
             }
@@ -1244,32 +1560,47 @@
                     xmlDoc.documentElement.removeChild(addNode);
                 }
             }
+
+            $("#btLevelNone").removeClass('btn-primary');
+            $("#btLevelFull").removeClass('btn-primary');
+            $("#btLevelNone").removeClass('active');
+            $("#btLevelFull").removeClass('active');
+
+            $("#btAcceptEULAEnabled").removeClass('btn-primary');
+            $("#btAcceptEULAEnabled").removeClass('active');
+            $("#btAcceptEULADisabled").removeClass('btn-primary');
+            $("#btAcceptEULADisabled").removeClass('active');
         }
 
 
 
         function odtSaveLogging(xmlDoc) {
             var loggingUpdatePath = $("#txtLoggingUpdatePath").val();
-
-            var addNode = xmlDoc.createElement("Logging");
-            var nodes = xmlDoc.documentElement.getElementsByTagName("Logging");
-            if (nodes.length > 0) {
-                addNode = xmlDoc.documentElement.getElementsByTagName("Logging")[0];
-            } else {
-                xmlDoc.documentElement.appendChild(addNode);
-            }
-
             var $displayLevelNone = $("#btLoggingLevelOff");
-            if ($displayLevelNone.hasClass('btn-primary')) {
-                addNode.setAttribute("Level", "Off");
-            } else {
-                addNode.setAttribute("Level", "Standard");
-            }
+            var $displayLevelStandard = $("#btLoggingLevelStandard");
 
-            if (loggingUpdatePath) {
-                addNode.setAttribute("Path", loggingUpdatePath);
-            } else {
-                addNode.removeAttribute("Path");
+            if ($displayLevelNone.hasClass('btn-primary') || $displayLevelStandard.hasClass('btn-primary')) {
+                var addNode = xmlDoc.createElement("Logging");
+                var nodes = xmlDoc.documentElement.getElementsByTagName("Logging");
+                if (nodes.length > 0) {
+                    addNode = xmlDoc.documentElement.getElementsByTagName("Logging")[0];
+                } else {
+                    xmlDoc.documentElement.appendChild(addNode);
+                }
+
+                if ($displayLevelNone.hasClass('btn-primary')) {
+                    addNode.setAttribute("Level", "Off");
+                }
+
+                if ($displayLevelStandard.hasClass('btn-primary')) {
+                    addNode.setAttribute("Level", "Standard");
+                }
+
+                if (loggingUpdatePath) {
+                    addNode.setAttribute("Path", loggingUpdatePath);
+                } else {
+                    addNode.removeAttribute("Path");
+                }
             }
         }
 
@@ -1282,6 +1613,11 @@
                     xmlDoc.documentElement.removeChild(addNode);
                 }
             }
+
+            $("#btLoggingLevelOff").removeClass('btn-primary');
+            $("#btLoggingLevelOff").removeClass('active');
+            $("#btLoggingLevelStandard").removeClass('btn-primary');
+            $("#btLoggingLevelStandard").removeClass('active');
         }
 
 
@@ -1359,7 +1695,7 @@
 
             return 0;
         }
-        
+
         function getRemoveLanguageNodeCount(xmlDoc, productId) {
             var addNode = xmlDoc.createElement("Remove");
 
@@ -1399,12 +1735,12 @@
             $('textarea#xmlText').val(xmlOutput);
         }
 
-        function toggleRemove(source) {
+        function toggleRemove(sourceId) {
 
-            if (source.id.toLowerCase() == "removeallproducts") {
+            if (sourceId.toLowerCase() == "removeallproducts") {
                 $("#removeSelectProducts").removeClass('active');
                 $("#removeSelectProducts").removeClass('btn-primary');
-       
+
                 var $this = $("#removeAllProducts");
                 if (!$this.hasClass('active')) {
                     $this.addClass('active');
@@ -1425,7 +1761,7 @@
                 if (!$this.hasClass('active')) {
                     $this.addClass('active');
                 }
-          
+
                 if (!$this.hasClass('btn-primary')) {
                     $this.addClass('btn-primary');
                 }
@@ -1437,16 +1773,16 @@
 
         }
 
-        function toggleUpdatesEnabled(source) {
+        function toggleUpdatesEnabled(sourceId) {
 
-            if (source.id.toLowerCase() == "btupdatesenabled") {
-                $("#btupdatesDisabled").removeClass('active');
+            if (sourceId.toLowerCase() == "btupdatesenabled") {
+                //$("#btupdatesDisabled").removeClass('active');
                 $("#btupdatesDisabled").removeClass('btn-primary');
 
                 var $this = $("#btupdatesEnabled");
-                if (!$this.hasClass('active')) {
-                    $this.addClass('active');
-                }
+                //if (!$this.hasClass('active')) {
+                //    $this.addClass('active');
+                //}
 
                 if (!$this.hasClass('btn-primary')) {
                     $this.addClass('btn-primary');
@@ -1456,13 +1792,13 @@
                 $("#txtTargetVersion").prop("disabled", false);
                 $("#txtDeadline").prop("disabled", false);
             } else {
-                $("#btupdatesEnabled").removeClass('active');
+                //$("#btupdatesEnabled").removeClass('active');
                 $("#btupdatesEnabled").removeClass('btn-primary');
 
                 var $this = $("#btupdatesDisabled");
-                if (!$this.hasClass('active')) {
-                    $this.addClass('active');
-                }
+                //if (!$this.hasClass('active')) {
+                //    $this.addClass('active');
+                //}
 
                 if (!$this.hasClass('btn-primary')) {
                     $this.addClass('btn-primary');
@@ -1472,12 +1808,12 @@
                 $("#txtTargetVersion").prop("disabled", true);
                 $("#txtDeadline").prop("disabled", true);
             }
-
+            return false;
         }
 
-        function toggleDisplayLevelEnabled(source) {
+        function toggleDisplayLevelEnabled(sourceId) {
 
-            if (source.id.toLowerCase() == "btlevelnone") {
+            if (sourceId.toLowerCase() == "btlevelnone") {
                 $("#btLevelFull").removeClass('active');
                 $("#btLevelFull").removeClass('btn-primary');
 
@@ -1505,9 +1841,9 @@
 
         }
 
-        function toggleDisplayEULAEnabled(source) {
+        function toggleDisplayEULAEnabled(sourceId) {
 
-            if (source.id.toLowerCase() == "btaccepteulaenabled") {
+            if (sourceId.toLowerCase() == "btaccepteulaenabled") {
                 $("#btAcceptEULADisabled").removeClass('active');
                 $("#btAcceptEULADisabled").removeClass('btn-primary');
 
@@ -1535,10 +1871,9 @@
 
         }
 
-        
-        function toggleLoggingEnabled(source) {
+        function toggleLoggingEnabled(sourceId) {
 
-            if (source.id.toLowerCase() == "btloggingleveloff") {
+            if (sourceId.toLowerCase() == "btloggingleveloff") {
                 $("#btLoggingLevelStandard").removeClass('active');
                 $("#btLoggingLevelStandard").removeClass('btn-primary');
 
@@ -1565,6 +1900,7 @@
             }
 
         }
+
     </script>
 
     <script>
