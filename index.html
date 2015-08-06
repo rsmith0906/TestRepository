@@ -293,14 +293,34 @@
                                                 <form class="form form-vertical">
 
                                                     <div class="control-group">
-                                                        <label>Version</label>
+                                                        <table>
+                                                            <tr>
+                                                                <td>
+                                                                    <label>Version</label>
+                                                                </td>
+                                                                <td style="width: 30px;text-align: center;cursor:pointer;">
+                                                                    <a data-toggle="modal" data-target="#versionModal" class="glyphicon glyphicon-info-sign"></a>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+
                                                         <div class="controls">
                                                             <input id="txtVersion" type="text" class="form-control" placeholder="Version">
                                                         </div>
                                                     </div>
 
                                                     <div class="control-group" style="padding-top: 5px;">
-                                                        <label>SourcePath</label>
+                                                        <table>
+                                                            <tr>
+                                                                <td>
+                                                                    <label>SourcePath</label>
+                                                                </td>
+                                                                <td style="width: 30px;text-align: center;cursor:pointer;">
+                                                                    <a data-toggle="modal" data-target="#sourcepathModal" class="glyphicon glyphicon-info-sign"></a>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+
                                                         <div class="controls">
                                                             <input id="txtSourcePath" type="text" class="form-control" placeholder="Enter Name">
                                                         </div>
@@ -797,6 +817,49 @@
                                             </tr>
                                         </table>
                                     </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Version Modal -->
+                    <div class="modal fade" id="versionModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">Help</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <h4>Product Language</h4>
+                                    <p>The Version of the Click-to-Run product to installation</p>
+                                    <hr>
+                                    <p>Optional. If a <strong>Version</strong> value is not set, the Click-to-Run product installation streams the latest available version from the source. The default is to use the most recently advertised build (as defined in v32.CAB or v64.CAB at the Click-to-Run Office installation source). </p> <p> <strong>Version</strong> can be set to an Office 2013 build number by using this format: X.X.X.X</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <!-- SourcePath Modal -->
+                    <div class="modal fade" id="sourcepathModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">Help</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <h4>Source Path</h4>
+                                    <p>Indicates the location to save the Click-to-Run installation source when you run the Office Deployment Tool in download mode.</p>
+                                    <hr>
+                                    <p>Optional. </p> <p>The <strong>SourcePath</strong> value can be set to a network, local, or HTTP path that contains a Click-to-Run source. Environment variables can be used for network or local paths.</p> <p></p> <p> <strong>SourcePath</strong> indicates the location to save the Click-to-Run installation source when you run the Office Deployment Tool in <strong>download</strong> mode. </p> <p></p> <p> <strong>SourcePath</strong> indicates the installation source path from which to install Office when you run the Office Deployment Tool in <strong>configure</strong> mode. If you don’t specify <strong>SourcePath</strong> in <strong>configure</strong> mode, Setup will look in the current folder for the Office source files. If the Office source files aren’t found in the current folder, Setup will look on Office 365 for them.</p> <p></p> <p> <strong>SourcePath</strong> specifies the path of the Click-to-Run Office source from which the App-V package will be made when you run the Office Deployment Tool in <strong>packager</strong> mode.</p> <p>If you do not specify <strong>SourcePath</strong>, Setup will attempt to create an <strong>\Office\Data\...</strong> folder structure in the working directory from which you are running setup.exe.</p>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
