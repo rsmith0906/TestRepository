@@ -341,13 +341,16 @@
                                             <form class="form form-vertical">
 
                                                 <div class="btn-group" style="width:300px;min-width: 300px">
-                                                    <button id="removeAllProducts" type="button" class="btn btn-default" onclick="toggleRemove(this.id);">
+                                                    <button id="removeAllProducts" type="button" class="btn btn-default" style="min-width: 120px" onclick="toggleRemove(this.id);">
                                                         Remove All
                                                     </button>
-                                                    <button id="removeSelectProducts" type="button" class="btn btn-default" onclick="toggleRemove(this.id);">
+                                                    <button id="removeSelectProducts" type="button" class="btn btn-default" style="min-width: 120px" onclick="toggleRemove(this.id);">
                                                         Remove Select
                                                     </button>
                                                 </div>
+                                                
+                                                <br />
+                                                <br />
 
                                                 <div class="control-group" style="padding-top: 5px;">
                                                     <label>Product</label>
@@ -450,14 +453,15 @@
                                             <form class="form form-vertical">
 
                                                 <div class="btn-group" style="width:300px">
-                                                    <button id="btupdatesEnabled" type="button" class="btn btn-default" onclick="toggleUpdatesEnabled(this.id);">
+                                                    <button id="btupdatesEnabled" type="button" class="btn btn-default" style="min-width: 120px" onclick="toggleUpdatesEnabled(this.id);">
                                                         Enabled
                                                     </button>
-                                                    <button id="btupdatesDisabled" type="button" class="btn btn-default" onclick="toggleUpdatesEnabled(this.id);">
+                                                    <button id="btupdatesDisabled" type="button" class="btn btn-default" style="min-width: 120px" onclick="toggleUpdatesEnabled(this.id);">
                                                         Disabled
                                                     </button>
                                                 </div>
 
+                                                <br />
                                                 <br />
 
                                                 <div class="control-group">
@@ -516,30 +520,39 @@
 
                                         <div class="panel-body">
                                             <form class="form form-vertical">
-
-                                                <label>Level</label>
-                                                <div class="btn-group btn-group-justified" style="width:300px">
-
-                                                    <button id="btLevelNone" type="button" class="btn btn-default" onclick="toggleDisplayLevelEnabled(this.id);">
-                                                        None
-                                                    </button>
-                                                    <button id="btLevelFull" type="button" class="btn btn-default" onclick="toggleDisplayLevelEnabled(this.id);">
-                                                        Full
-                                                    </button>
+                                                
+                                                <div>
+                                                    <label>Level</label>
                                                 </div>
+                                                <div>
+                                                    <div class="btn-group" style="width:300px">
+
+                                                        <button id="btLevelNone" type="button" class="btn btn-default" style="min-width: 120px" onclick="toggleDisplayLevelEnabled(this.id);">
+                                                            None
+                                                        </button>
+                                                        <button id="btLevelFull" type="button" class="btn btn-default" style="min-width: 120px" onclick="toggleDisplayLevelEnabled(this.id);">
+                                                            Full
+                                                        </button>
+                                                    </div>
+                                                </div>
+
 
                                                 <br />
-
-                                                <label>AcceptEULA</label>
-                                                <div class="btn-group btn-group-justified" style="width:300px">
-
-                                                    <button id="btAcceptEULAEnabled" type="button" class="btn btn-default" onclick="toggleDisplayEULAEnabled(this.id);">
-                                                        True
-                                                    </button>
-                                                    <button id="btAcceptEULADisabled" type="button" class="btn btn-default" onclick="toggleDisplayEULAEnabled(this.id);">
-                                                        False
-                                                    </button>
+                                                <div>
+                                                    <label>AcceptEULA</label>
                                                 </div>
+                                                <div>
+                                                    <div class="btn-group" style="width:300px">
+
+                                                        <button id="btAcceptEULAEnabled" type="button" class="btn btn-default" style="min-width: 120px" onclick="toggleDisplayEULAEnabled(this.id);">
+                                                            True
+                                                        </button>
+                                                        <button id="btAcceptEULADisabled" type="button" class="btn btn-default" style="min-width: 120px" onclick="toggleDisplayEULAEnabled(this.id);">
+                                                            False
+                                                        </button>
+                                                    </div>
+                                                </div>
+
 
                                                 <br />
 
@@ -575,15 +588,19 @@
                                         <div class="panel-body">
                                             <form class="form form-vertical">
 
-                                                <label>Level</label>
-                                                <div class="btn-group btn-group-justified" style="width:300px">
+                                               <div>
+                                                    <label>Level</label>
+                                                </div>
+                                                <div>
+                                                    <div class="btn-group" style="width:300px">
 
-                                                    <button id="btLoggingLevelOff" type="button" class="btn btn-default" onclick="toggleLoggingEnabled(this.id);">
-                                                        Off
-                                                    </button>
-                                                    <button id="btLoggingLevelStandard" type="button" class="btn btn-default" onclick="toggleLoggingEnabled(this.id);">
-                                                        Standard
-                                                    </button>
+                                                        <button id="btLoggingLevelOff" type="button" class="btn btn-default" style="min-width: 120px" onclick="toggleLoggingEnabled(this.id);">
+                                                            Off
+                                                        </button>
+                                                        <button id="btLoggingLevelStandard" type="button" class="btn btn-default" style="min-width: 120px" onclick="toggleLoggingEnabled(this.id);">
+                                                            Standard
+                                                        </button>
+                                                    </div>
                                                 </div>
 
                                                 <br />
@@ -625,20 +642,25 @@
                     <div class="col-md-7" style="min-width: 550px">
                         <div class="panel panel-default" id="xmlViewerPane">
                             <div class="panel-heading">
-                                <table width="100%">
+                                <table style="width: 100%">
                                     <tr>
-                                        <td>
+                                        <td style="width: 200px;text-wrap:none;">
                                             <h4>XML Viewer</h4>
                                         </td>
-                                        <td>
+
+                                        <td style="padding-right:10px;text-align: right">
                                             <form id="text-options">
-                                                <input type="button" value="Download" onclick="download()">
+                                                <input type="button" class="btn btn-default btn-primary" value="Upload" onclick="document.getElementById('fileInput').click();">
                                             </form>
                                         </td>
-                                        <td style="width:250px">
-                                            Upload an Existing Configuration File
+
+                                        <td style="padding-right:10px;width: 100px;text-align: right">
+                                            <form id="text-options">
+                                                <input type="button" class="btn btn-default btn-primary" value="Download" onclick="download()">
+                                            </form>
                                         </td>
-                                        <td style="width:200px">
+
+                                        <td style="width:200px;display: none;width: 100px;">
                                             <input type="file" id="fileInput" size="10">
                                         </td>
 
