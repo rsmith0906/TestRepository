@@ -243,87 +243,102 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
                                             <div class="panel-title">
-                                                <h4>Optional</h4>
+                                                <table style="width: 100%">
+                                                    <tr>
+                                                        <td style="width: 100px">
+                                                            <h4>Optional</h4> 
+                                                        </td>
+                                                        <td style="text-align: right;">
+                                                            <a id="toggleExpand" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="glyphicon glyphicon-collapse-up" onclick="toggleExpandOptional(this);">
+
+
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                
+                                                
                                             </div>
                                         </div>
+                                        
+                                        <div id="collapseOne" class="panel-collapse collapse in">
+                                            <div class="panel-body">
+                                                <form class="form form-vertical">
 
-                                        <div class="panel-body">
-                                            <form class="form form-vertical">
-
-                                                <div class="control-group">
-                                                    <label>Version</label>
-                                                    <div class="controls">
-                                                        <input id="txtVersion" type="text" class="form-control" placeholder="Version">
-                                                    </div>
-                                                </div>
-
-                                                <div class="control-group" style="padding-top: 5px;">
-                                                    <label>SourcePath</label>
-                                                    <div class="controls">
-                                                        <input id="txtSourcePath" type="text" class="form-control" placeholder="Enter Name">
-                                                    </div>
-                                                </div>
-
-                                                <div class="control-group" style="padding-top: 5px;">
-                                                    <label>PIDKEY</label>
-                                                    <div class="controls">
-                                                        <input id="txtPidKey" type="text" class="form-control" placeholder="XXXXX-XXXXX-XXXXX-XXXXX-XXXXX">
-                                                    </div>
-                                                </div>
-                                                
-
-                                                <div class="control-group" style="padding-top: 5px;">
-                                                    <label>Exclude Office Programs</label>
-                                                    <div class="controls" style="min-width: 400px; overflow: auto;">
-                                                        <div style="float: left; width: 100%">
-                                                            <table>
-                                                                <tr>
-                                                                    <td style="width: 100%; padding-right: 10px">
-                                                                        <select id="cbExcludeApp" class="form-control">
-                                                                            <option value="Access">Access</option>
-                                                                            <option value="Excel">Excel</option>
-                                                                            <option value="Groove">Groove</option>
-                                                                            <option value="InfoPath">InfoPath</option>
-                                                                            <option value="Lync">Lync</option>
-                                                                            <option value="OneNote">OneNote</option>
-                                                                            <option value="Outlook">Outlook</option>
-                                                                            <option value="PowerPoint">PowerPoint</option>
-                                                                            <option value="Project">Project</option>
-                                                                            <option value="Publisher">Publisher</option>
-                                                                            <option value="SharePointDesigner">SharePointDesigner</option>
-                                                                            <option value="Visio">Visio</option>
-                                                                            <option value="Word">Word</option>
-                                                                        </select>
-                                                                    </td>
-                                                                    <td style="width: 150px;text-align: right; padding-right: 10px">
-                                                                        <button id="btAddExcludeApp" class="btn btn-primary">
-                                                                            Add
-                                                                        </button>
-                                                                    </td>
-                                                                    <td style="width:80px;text-align: right">
-                                                                        <button id="btRemoveExcludeApp" class="btn btn-primary" disabled="true">
-                                                                            Remove
-                                                                        </button>
-                                                                    </td>
-                                                                </tr>
-                                                            </table>
+                                                    <div class="control-group">
+                                                        <label>Version</label>
+                                                        <div class="controls">
+                                                            <input id="txtVersion" type="text" class="form-control" placeholder="Version">
                                                         </div>
-
                                                     </div>
-                                                </div>
 
-                                                <br />
-
-                                                <div class="control-group">
-                                                    <label></label>
-                                                    <div class="controls">
-
+                                                    <div class="control-group" style="padding-top: 5px;">
+                                                        <label>SourcePath</label>
+                                                        <div class="controls">
+                                                            <input id="txtSourcePath" type="text" class="form-control" placeholder="Enter Name">
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </form>
+
+                                                    <div class="control-group" style="padding-top: 5px;">
+                                                        <label>PIDKEY</label>
+                                                        <div class="controls">
+                                                            <input id="txtPidKey" type="text" class="form-control" placeholder="XXXXX-XXXXX-XXXXX-XXXXX-XXXXX">
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="control-group" style="padding-top: 5px;">
+                                                        <label>Exclude Office Programs</label>
+                                                        <div class="controls" style="min-width: 400px; overflow: auto;">
+                                                            <div style="float: left; width: 100%">
+                                                                <table>
+                                                                    <tr>
+                                                                        <td style="width: 100%; padding-right: 10px">
+                                                                            <select id="cbExcludeApp" class="form-control">
+                                                                                <option value="Access">Access</option>
+                                                                                <option value="Excel">Excel</option>
+                                                                                <option value="Groove">Groove</option>
+                                                                                <option value="InfoPath">InfoPath</option>
+                                                                                <option value="Lync">Lync</option>
+                                                                                <option value="OneNote">OneNote</option>
+                                                                                <option value="Outlook">Outlook</option>
+                                                                                <option value="PowerPoint">PowerPoint</option>
+                                                                                <option value="Project">Project</option>
+                                                                                <option value="Publisher">Publisher</option>
+                                                                                <option value="SharePointDesigner">SharePointDesigner</option>
+                                                                                <option value="Visio">Visio</option>
+                                                                                <option value="Word">Word</option>
+                                                                            </select>
+                                                                        </td>
+                                                                        <td style="width: 150px;text-align: right; padding-right: 10px">
+                                                                            <button id="btAddExcludeApp" class="btn btn-primary">
+                                                                                Add
+                                                                            </button>
+                                                                        </td>
+                                                                        <td style="width:80px;text-align: right">
+                                                                            <button id="btRemoveExcludeApp" class="btn btn-primary" disabled="true">
+                                                                                Remove
+                                                                            </button>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+                                                    <br />
+
+                                                    <div class="control-group">
+                                                        <label></label>
+                                                        <div class="controls">
+
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
                                         </div>
-
-                                        <!--/panel content-->
+                                        
                                     </div>
 
                                 </div>
@@ -368,57 +383,65 @@
                                                 <div class="control-group" style="padding-top: 5px;">
                                                     <label>Language</label>
                                                     <div class="controls">
-                                                        <div style="float: left; width: 78%;">
-                                                            <select id="cbRemoveLanguage" class="form-control" disabled="true">
-                                                                <option value="en-us">English (en-us)</option>
-                                                                <option value="ar-sa">Arabic (ar-sa)</option>
-                                                                <option value="bg-bg">Bulgarian (bg-bg)</option>
-                                                                <option value="zh-cn">Chinese (Simplified) (zh-cn)</option>
-                                                                <option value="zh-tw">Chinese (zh-tw)</option>
-                                                                <option value="hr-hr">Croatian (hr-hr)</option>
-                                                                <option value="cs-cz">Czech (cs-cz)</option>
-                                                                <option value="da-dk">Danish (da-dk)</option>
-                                                                <option value="nl-nl">Dutch (nl-nl)</option>
-                                                                <option value="et-ee">Estonian (et-ee)</option>
-                                                                <option value="fi-fi">Finnish (fi-fi)</option>
-                                                                <option value="fr-fr">French (fr-fr)</option>
-                                                                <option value="de-de">German (de-de)</option>
-                                                                <option value="el-gr">Greek (el-gr)</option>
-                                                                <option value="he-il">Hebrew (he-il)</option>
-                                                                <option value="hi-in">Hindi (hi-in)</option>
-                                                                <option value="hu-hu">Hungarian (hu-hu)</option>
-                                                                <option value="id-id">Indonesian (id-id)</option>
-                                                                <option value="it-it">Italian (it-it)</option>
-                                                                <option value="ja-jp">Japanese (ja-jp)</option>
-                                                                <option value="kk-kh">Kazakh (kk-kh)</option>
-                                                                <option value="ko-kr">Korean (ko-kr)</option>
-                                                                <option value="lv-lv">Latvian (lv-lv)</option>
-                                                                <option value="lt-lt">Lithuanian (lt-lt)</option>
-                                                                <option value="ms-my">Malay (ms-my)</option>
-                                                                <option value="nb-no">Norwegian (Bokm�l) (nb-no)</option>
-                                                                <option value="pl-pl">Polish (pl-pl)</option>
-                                                                <option value="pt-br">Portuguese (pt-br)</option>
-                                                                <option value="pt-pt">Portuguese (pt-pt)</option>
-                                                                <option value="ro-ro">Romanian (ro-ro)</option>
-                                                                <option value="ru-ru">Russian (ru-ru)</option>
-                                                                <option value="sr-latn-rs">Serbian (Latin) (sr-latn-rs)</option>
-                                                                <option value="sk-sk">Slovak (sk-sk)</option>
-                                                                <option value="sl-si">Slovenian (sl-si)</option>
-                                                                <option value="es-es">Spanish (es-es)</option>
-                                                                <option value="sv-se">Swedish (sv-se)</option>
-                                                                <option value="th-th">Thai (th-th)</option>
-                                                                <option value="tr-tr">Turkish (tr-tr)</option>
-                                                                <option value="uk-ua">Ukrainian (uk-ua)</option>
-                                                            </select>
-                                                        </div>
-                                                        <div style="float: left; width: 22%; padding-left:10px; ">
-                                                            <button id="btAddRemoveLanguage" class="btn btn-primary" disabled="true">
-                                                                Add
-                                                            </button>
-                                                            <button id="btRemoveRemoveLanguage" class="btn btn-primary" disabled="true">
-                                                                Remove
-                                                            </button>
-                                                        </div>
+                                                                                                   
+                                                        <table>
+                                                            <tr>
+                                                                <td style="width: 100%; padding-right: 10px">
+                                                                    <select id="cbRemoveLanguage" class="form-control" disabled="true">
+                                                                        <option value="en-us">English (en-us)</option>
+                                                                        <option value="ar-sa">Arabic (ar-sa)</option>
+                                                                        <option value="bg-bg">Bulgarian (bg-bg)</option>
+                                                                        <option value="zh-cn">Chinese (Simplified) (zh-cn)</option>
+                                                                        <option value="zh-tw">Chinese (zh-tw)</option>
+                                                                        <option value="hr-hr">Croatian (hr-hr)</option>
+                                                                        <option value="cs-cz">Czech (cs-cz)</option>
+                                                                        <option value="da-dk">Danish (da-dk)</option>
+                                                                        <option value="nl-nl">Dutch (nl-nl)</option>
+                                                                        <option value="et-ee">Estonian (et-ee)</option>
+                                                                        <option value="fi-fi">Finnish (fi-fi)</option>
+                                                                        <option value="fr-fr">French (fr-fr)</option>
+                                                                        <option value="de-de">German (de-de)</option>
+                                                                        <option value="el-gr">Greek (el-gr)</option>
+                                                                        <option value="he-il">Hebrew (he-il)</option>
+                                                                        <option value="hi-in">Hindi (hi-in)</option>
+                                                                        <option value="hu-hu">Hungarian (hu-hu)</option>
+                                                                        <option value="id-id">Indonesian (id-id)</option>
+                                                                        <option value="it-it">Italian (it-it)</option>
+                                                                        <option value="ja-jp">Japanese (ja-jp)</option>
+                                                                        <option value="kk-kh">Kazakh (kk-kh)</option>
+                                                                        <option value="ko-kr">Korean (ko-kr)</option>
+                                                                        <option value="lv-lv">Latvian (lv-lv)</option>
+                                                                        <option value="lt-lt">Lithuanian (lt-lt)</option>
+                                                                        <option value="ms-my">Malay (ms-my)</option>
+                                                                        <option value="nb-no">Norwegian (Bokm�l) (nb-no)</option>
+                                                                        <option value="pl-pl">Polish (pl-pl)</option>
+                                                                        <option value="pt-br">Portuguese (pt-br)</option>
+                                                                        <option value="pt-pt">Portuguese (pt-pt)</option>
+                                                                        <option value="ro-ro">Romanian (ro-ro)</option>
+                                                                        <option value="ru-ru">Russian (ru-ru)</option>
+                                                                        <option value="sr-latn-rs">Serbian (Latin) (sr-latn-rs)</option>
+                                                                        <option value="sk-sk">Slovak (sk-sk)</option>
+                                                                        <option value="sl-si">Slovenian (sl-si)</option>
+                                                                        <option value="es-es">Spanish (es-es)</option>
+                                                                        <option value="sv-se">Swedish (sv-se)</option>
+                                                                        <option value="th-th">Thai (th-th)</option>
+                                                                        <option value="tr-tr">Turkish (tr-tr)</option>
+                                                                        <option value="uk-ua">Ukrainian (uk-ua)</option>
+                                                                    </select>
+                                                                </td>
+                                                                <td style="width: 150px;text-align: right; padding-right: 10px">
+                                                                    <button id="btAddRemoveLanguage" class="btn btn-primary" disabled="true">
+                                                                        Add
+                                                                    </button>
+                                                                </td>
+                                                                <td style="width:80px;text-align: right">
+                                                                    <button id="btRemoveRemoveLanguage" class="btn btn-primary" disabled="true">
+                                                                        Remove
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+
                                                     </div>
                                                 </div>
 
@@ -429,6 +452,9 @@
                                                     <div class="controls">
                                                         <button id="btAddRemoveProduct" class="btn btn-primary">
                                                             Add Remove Product
+                                                        </button>
+                                                        <button id="btDeleteRemoveProduct" class="btn btn-primary">
+                                                            Delete Remove Product
                                                         </button>
                                                     </div>
                                                 </div>
@@ -695,6 +721,13 @@
         $(document).ready(function () {
 
             var fileInput = document.getElementById('fileInput');
+            $("#btRemoveProduct").prop("disabled", true);
+            $("#btAddLanguage").prop("disabled", true);
+            $("#btRemoveLanguage").prop("disabled", true);
+
+            $("#collapseOne").collapse('hide');
+            $("#toggleExpand").removeClass('glyphicon-collapse-up');
+            $("#toggleExpand").addClass('glyphicon-collapse-down');
 
             fileInput.addEventListener('change', function (e) {
                 // Put the rest of the demo code here.
@@ -761,8 +794,6 @@
 
                 displayXml(xmlDoc);
 
-                $("#btAddProduct").text('Edit Product');
-
                 return false;
             });
 
@@ -787,6 +818,11 @@
             $("#cbProduct").change(function () {
                 var end = this.value;
                 changeSelectedProduct();
+            });
+
+            $("#cbLanguage").change(function () {
+                var end = this.value;
+                changeSelectedLanguage();
             });
 
             $("#btAddExcludeApp").button().click(function () {
@@ -890,6 +926,18 @@
 
         });
 
+        function toggleExpandOptional(source) {
+
+            if ($("#toggleExpand").hasClass('glyphicon-collapse-up')) {
+                $("#toggleExpand").removeClass('glyphicon-collapse-up');
+                $("#toggleExpand").addClass('glyphicon-collapse-down');
+            } else {
+                $("#toggleExpand").addClass('glyphicon-collapse-up');
+                $("#toggleExpand").removeClass('glyphicon-collapse-down');
+            }
+
+        }
+
         function download() {
             var xmlDoc = getXmlDocument();
             var xmlString = (new XMLSerializer().serializeToString(xmlDoc.documentElement));
@@ -932,6 +980,30 @@
             }
         }
 
+        function changeSelectedLanguage() {
+            var selectedProduct = $("#cbProduct").val();
+            var selectLanguage = $("#cbLanguage").val();
+
+            var xmlDoc = getXmlDocument();
+            
+            $("#btAddLanguage").prop("disabled", false);
+
+            var addNode = null;
+            var nodes = xmlDoc.documentElement.getElementsByTagName("Add");
+            if (nodes.length > 0) {
+                addNode = xmlDoc.documentElement.getElementsByTagName("Add")[0];
+            }
+
+            if (addNode) {
+                var productNode = getProductNode(addNode, selectedProduct);
+
+                var langNode = getLanguageNode(productNode, selectLanguage);
+                if (langNode) {
+                    $("#btAddLanguage").prop("disabled", true);
+                }
+            }
+        }
+
         function changeSelectedProduct() {
             var productId = $('#cbProduct').val();
 
@@ -939,34 +1011,39 @@
 
             $("#txtPidKey").val("");
 
-            var productNode = getProductNode(xmlDoc, productId);
-            if (productNode) {
-                $("#btAddProduct").text('Edit Product');
-                $("#btRemoveProduct").prop("disabled", false);
+            var productCount = getAddProductCount(xmlDoc);
+            if (productCount > 0) {
+                var productNode = getProductNode(xmlDoc, productId);
+                if (productNode) {
+                    $("#btAddProduct").text('Edit Product');
+                    $("#btRemoveProduct").prop("disabled", false);
 
-                var pidKey = productNode.getAttribute("PIDKEY");
-                if (pidKey) {
-                    $("#txtPidKey").val(pidKey);
-                }
+                    var pidKey = productNode.getAttribute("PIDKEY");
+                    if (pidKey) {
+                        $("#txtPidKey").val(pidKey);
+                    }
 
-                var excludeApps = productNode.getElementsByTagName("ExcludeApp");
-                if (excludeApps.length == 0) {
+                    var excludeApps = productNode.getElementsByTagName("ExcludeApp");
+                    if (excludeApps.length == 0) {
+                        $("#btRemoveExcludeApp").prop("disabled", true);
+                        $("select#cbExcludeApp").prop('selectedIndex', 0);
+                    } else {
+                        $("#btRemoveExcludeApp").prop("disabled", false);
+
+                        var excludeApp = excludeApps[0];
+                        if (excludeApp) {
+                            $("#cbExcludeApp").val(excludeApp.getAttribute("ID"));
+                        }
+                    }
+
+                } else {
+                    $("#btAddProduct").text('Add Product');
+                    //$("#btRemoveProduct").prop("disabled", true);
                     $("#btRemoveExcludeApp").prop("disabled", true);
                     $("select#cbExcludeApp").prop('selectedIndex', 0);
-                } else {
-                    $("#btRemoveExcludeApp").prop("disabled", false);
-
-                    var excludeApp = excludeApps[0];
-                    if (excludeApp) {
-                        $("#cbExcludeApp").val(excludeApp.getAttribute("ID"));
-                    }
                 }
-
             } else {
-                $("#btAddProduct").text('Add Product');
                 $("#btRemoveProduct").prop("disabled", true);
-                $("#btRemoveExcludeApp").prop("disabled", true);
-                $("select#cbExcludeApp").prop('selectedIndex', 0);
             }
 
             var langCount = getLanguageNodeCount(xmlDoc, productId);
@@ -1096,6 +1173,13 @@
                 $("#txtLoggingUpdatePath").val(path);
             }
 
+            var productCount = getAddProductCount(xmlDoc);
+            if (productCount == 0) {
+                $("#btRemoveProduct").prop("disabled", true);
+            } else {
+                $("#btRemoveProduct").prop("disabled", false);
+            }
+
         }
 
         function resizeWindow() {
@@ -1147,6 +1231,8 @@
                         langNode = xmlDoc.createElement("Language");
                         langNode.setAttribute("ID", selectLanguage);
                         productNode.insertBefore(langNode, lastLang);
+
+                        $("#btAddLanguage").prop("disabled", true);
                     }
                 }
             }
@@ -1171,6 +1257,7 @@
                         var langNode = getLanguageNode(productNode, selectLanguage);
                         if (langNode) {
                             productNode.removeChild(langNode);
+                            $("#btAddLanguage").prop("disabled", false);
                         }
                     }
                 }
@@ -1454,6 +1541,16 @@
                     xmlDoc.documentElement.removeChild(removeNode);
                 }
             }
+
+            var productCount = getAddProductCount(xmlDoc);
+            if (productCount == 0) {
+                $("#btRemoveProduct").prop("disabled", true);
+                $("#btAddLanguage").prop("disabled", true);
+                $("#btRemoveLanguage").prop("disabled", true);
+            } else {
+                $("#btRemoveProduct").prop("disabled", false);
+                $("#btAddLanguage").prop("disabled", true);
+            }
         }
 
         function odtRemoveProduct(xmlDoc) {
@@ -1469,12 +1566,29 @@
                 if (productNode) {
                     addNode.removeChild(productNode);
                 }
+
+                var products = addNode.getElementsByTagName("Product");
+                if (products.length == 0) {
+                    addNode.parentNode.removeChild(addNode);
+                }
+            }
+
+            var productCount = getAddProductCount(xmlDoc);
+            if (productCount == 0) {
+                $("#btRemoveProduct").prop("disabled", true);
+                $("#btAddLanguage").prop("disabled", true);
+                $("#btRemoveLanguage").prop("disabled", true);
+            } else {
+                $("#btRemoveProduct").prop("disabled", false);
+                $("#btAddLanguage").prop("disabled", false);
             }
 
             //$("#removeAllProducts").removeClass('btn-primary');
             //$("#removeSelectProducts").removeClass('btn-primary');
             //$("#removeAllProducts").removeClass('active');
             //$("#removeSelectProducts").removeClass('active');
+
+            $("#btAddProduct").text('Add Product');
         }
 
 
@@ -1656,6 +1770,17 @@
                 }
             }
             return productNode;
+        }
+
+        function getAddProductCount(xmlDoc) {
+            var nodes = xmlDoc.documentElement.getElementsByTagName("Add");
+            if (nodes.length > 0) {
+                var addNode = xmlDoc.documentElement.getElementsByTagName("Add")[0];
+
+                var products = addNode.getElementsByTagName("Product");
+                return products.length;
+            }
+            return 0;
         }
 
         function checkForAddProductNode(xmlDoc, selectedProduct) {
