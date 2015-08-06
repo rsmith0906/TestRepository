@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="Office Click-To-Run Configuration XML Editor" />
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+   
 
     <script type="text/javascript" src="./Scripts/vkbeautify.0.99.00.beta.js"></script>
 
@@ -66,6 +67,11 @@
 
         #cbEdition {
         }
+
+        div.alert table{border-bottom:none;border-right:none;border-collapse:separate;border-spacing:0;}div#content div.alert td,div#content div.alert th{border-top:none;border-left:none;background-clip:padding-box;}div.alert th{background-color:#ededed;font-weight:bold;}div.alert img{padding-right:5px;border:0;}div.alert p{margin:0;}
+
+        .cl_IC101471{background:url('https://i-technet.sec.s-msft.com/Areas/Epx/Content/Images/ImageSprite.png?v=635736413806036745') no-repeat scroll -1228px -3px;width:16px;height:14px;overflow:hidden;}
+
     </style>
 </head>
 
@@ -75,11 +81,6 @@
     <div id="top-nav" class="navbar navbar-inverse navbar-static-top" style="min-width: 550px">
         <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
 
                 <table cellspacing="0" cellpadding="0">
                     <tr>
@@ -92,9 +93,6 @@
                     </tr>
                 </table>
 
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right"></ul>
             </div>
         </div>
         <!-- /container -->
@@ -133,7 +131,17 @@
                                             <form class="form form-vertical">
 
                                                 <div class="control-group" style="padding-top: 5px;">
-                                                    <label>Product</label>
+                                                    <table>
+                                                        <tr>
+                                                            <td>
+                                                                <label>Product</label>
+                                                            </td>
+                                                            <td style="width: 30px;text-align: center;cursor:pointer;">
+                                                                <a data-toggle="modal" data-target="#myModal" class="glyphicon glyphicon-info-sign"></a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    
                                                     <div class="controls">
                                                         <select id="cbProduct" class="form-control">
                                                             <option value="O365ProPlusRetail">Office 365 ProPlus Retail</option>
@@ -143,10 +151,21 @@
                                                             <option value="SPDRetail">SharePoint Designer</option>
                                                         </select>
                                                     </div>
+
                                                 </div>
 
                                                 <div class="control-group" style="padding-top: 5px;">
-                                                    <label>Edition</label>
+                                                    <table>
+                                                        <tr>
+                                                            <td>
+                                                                <label>Edition</label>
+                                                            </td>
+                                                            <td style="width: 30px;text-align: center;cursor:pointer;">
+                                                                <a data-toggle="modal" data-target="#bitnessModal" class="glyphicon glyphicon-info-sign"></a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+
                                                     <div class="controls">
                                                         <select id="cbEdition" class="form-control">
                                                             <option value="32">32-bit</option>
@@ -156,7 +175,17 @@
                                                 </div>
 
                                                 <div class="control-group" style="padding-top: 5px;">
-                                                    <label>Language</label>
+                                                    <table>
+                                                        <tr>
+                                                            <td>
+                                                                <label>Language</label>
+                                                            </td>
+                                                            <td style="width: 30px;text-align: center;cursor:pointer;">
+                                                                <a data-toggle="modal" data-target="#languageModal" class="glyphicon glyphicon-info-sign"></a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+
                                                     <div class="controls" style="min-width: 400px; overflow: auto;">
                                                         <div style="float: left; width: 100%">
                                                             <table >
@@ -221,9 +250,7 @@
                                                     </div>
                                                 </div>
 
-                                                <br />
-
-                                                <div class="control-group" style="padding-top: 5px;">
+                                                <div class="control-group" >
                                                     <label></label>
                                                     <div class="controls">
                                                         <button id="btAddProduct" class="btn btn-primary">
@@ -356,7 +383,7 @@
                                             <form class="form form-vertical">
 
                                                 <div class="btn-group" style="width:300px;min-width: 300px">
-                                                    <button id="removeAllProducts" type="button" class="btn btn-default" style="min-width: 120px" onclick="toggleRemove(this.id);">
+                                                    <button id="removeAllProducts" type="button" class="btn btn-default btn-primary" style="min-width: 120px" onclick="toggleRemove(this.id);">
                                                         Remove All
                                                     </button>
                                                     <button id="removeSelectProducts" type="button" class="btn btn-default" style="min-width: 120px" onclick="toggleRemove(this.id);">
@@ -701,6 +728,82 @@
 
                         </div>
                     </div>
+                    
+
+                    <!-- Product Modal -->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">Help</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <h4>Office Product</h4>
+                                    <p>Specifies the Click-to-Run product to install.</p>
+                                    <hr>
+                                    <p>Required. <strong>ID</strong> must be set to a valid ProductRelease ID.</p> <p>The supported ProductRelease IDs for Click-to-Run for Office 365 products are as follows:</p> <ul><li> <p>O365ProPlusRetail</p> </li><li> <p>VisioProRetail</p> </li><li> <p>ProjectProRetail</p> </li><li> <p>SPDRetail (SharePoint Designer)</p> </li></ul> <p>If <strong>ID</strong> is not set, the operation fails and indicates that the input is not valid.</p> <p>The order of <strong>Product</strong> elements determines the order in which the products are installed. The first <strong>Product ID</strong> is used to determine in which context the Microsoft Office First Run Experience application starts. Microsoft Office First Run Experience refers to the first time each Office application starts.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Bitness Modal -->
+                    <div class="modal fade" id="bitnessModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">Help</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <h4>Office Client Edition</h4>
+                                    <p>Specifies the edition of Click-to-Run for Office 365 product to use: 32- or 64-bit.</p>
+                                    <hr>
+                                    <p>Required. Specifies the edition of Click-to-Run for Office 365 product to use: 32- or 64-bit. The action fails if <strong>OfficeClientEdition</strong> is not set to a valid value.</p> <p>A <strong>configure</strong> mode action may fail if <strong>OfficeClientEdition</strong> is set incorrectly. For example, if you attempt to install a 64-bit edition of a Click-to-Run for Office 365 product on a computer that is running a 32-bit Windows operating system, or if you try to install a 32-bit Click-to-Run for Office 365 product on a computer that has a 64-bit edition of Office installed.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Language Modal -->
+                    <div class="modal fade" id="languageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">Help</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <h4>Product Language</h4>
+                                    <p>Determine which product languages to install.</p>
+                                    <hr>
+                                    <p>Required. If the <strong>Language ID</strong> value is not set, the installation operation fails and indicates that the input is not valid.</p> <p>The <strong>ID</strong> value can be set to a valid Office culture language (such as en-us for English US or ja-jp for Japanese). The <em>ll-cc</em> value is the language identifier. </p>
+                                    
+                                    <div class="alert">
+                                        <table>
+                                            <tr><th align="left"><img id="note" alt="Note" src="https://i-technet.sec.s-msft.com/areas/global/content/clear.gif" title="Note" xmlns="" class="cl_IC101471" /><strong>Note: </strong></th></tr>
+                                            <tr>
+                                                <td>
+                                                    Language elements determine which product languages to install. Administrators must specify the languages they want to install. The first language determines the Shell UI culture. The Shell UI is the language of shortcuts, right-click context menus, and tooltips.<br />
+                                                    If you decide that you want to change the Shell UI language after an initial installation, you have to uninstall Click-to-Run and reinstall. Add the language that you want to set for the Shell UI as the first language in the custom Configuration.xml file.
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>
@@ -761,7 +864,7 @@
                 resizeWindow();
             });
 
-            $(".alert").addClass("in").fadeOut(4500);
+            //$(".alert").addClass("in").fadeOut(4500);
 
             $('#txtPidKey').keyup(function () {
 
@@ -1196,7 +1299,7 @@
             //$("#logging").height(leftPaneHeight);
 
             var rightPaneHeight = bodyHeight - 100;
-            //$("#xmlText").height(rightPaneHeight - 100);
+            $("#xmlText").height(rightPaneHeight - 100);
 
         }
 
