@@ -21,14 +21,15 @@
     <link rel="apple-touch-icon" sizes="72x72" href="/bootstrap/img/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="/bootstrap/img/apple-touch-icon-114x114.png">
 
-    <!-- CSS code from Bootply.com editor -->
+
+
 
     <style type="text/css">
         
-         .navbar-static-top {
-             margin-bottom: 20px;
-             background-color: #dc3c00;
-         }
+        .navbar-static-top {
+            margin-bottom: 20px;
+            background-color: #dc3c00;
+        }
 
         i {
             font-size: 16px;
@@ -72,7 +73,10 @@
 
         .cl_IC101471{background:url('https://i-technet.sec.s-msft.com/Areas/Epx/Content/Images/ImageSprite.png?v=635736413806036745') no-repeat scroll -1228px -3px;width:16px;height:14px;overflow:hidden;}
 
+
+
     </style>
+
 </head>
 
 <!-- HTML code from Bootply.com editor -->
@@ -84,11 +88,11 @@
 
                 <table cellspacing="0" cellpadding="0">
                     <tr>
-                        <td>
+                        <td style="width: 30px;text-align: center">
                             <img src="./images/Office.png" alt="" height="40" style="padding-top: 3px" />
                         </td>
                         <td style="padding-left: 10px">
-                            <a class="navbar-brand" href="#" style="color:white;">Office Click-To-Run Configuration XML Editor</a>
+                            <a class="navbar-brand" href="#" style="color:white; font-family:segoe ui">Office Click-To-Run Configuration XML Editor</a>
                         </td>
                     </tr>
                 </table>
@@ -322,12 +326,22 @@
                                                         </table>
 
                                                         <div class="controls">
-                                                            <input id="txtSourcePath" type="text" class="form-control" placeholder="Enter Name">
+                                                            <input id="txtSourcePath" type="text" class="form-control" placeholder="Source Path">
                                                         </div>
                                                     </div>
 
                                                     <div class="control-group" style="padding-top: 5px;">
-                                                        <label>PIDKEY</label>
+                                                        <table>
+                                                            <tr>
+                                                                <td>
+                                                                    <label>PIDKEY</label>
+                                                                </td>
+                                                                <td style="width: 30px;text-align: center;cursor:pointer;">
+                                                                    <a data-toggle="modal" data-target="#pidkeyModal" class="glyphicon glyphicon-info-sign"></a>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+
                                                         <div class="controls">
                                                             <input id="txtPidKey" type="text" class="form-control" placeholder="XXXXX-XXXXX-XXXXX-XXXXX-XXXXX">
                                                         </div>
@@ -335,7 +349,17 @@
 
 
                                                     <div class="control-group" style="padding-top: 5px;">
-                                                        <label>Exclude Office Programs</label>
+                                                        <table>
+                                                            <tr>
+                                                                <td>
+                                                                    <label>Exclude Office Programs</label>
+                                                                </td>
+                                                                <td style="width: 30px;text-align: center;cursor:pointer;">
+                                                                    <a data-toggle="modal" data-target="#excludeappModal" class="glyphicon glyphicon-info-sign"></a>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+
                                                         <div class="controls" style="min-width: 400px; overflow: auto;">
                                                             <div style="float: left; width: 100%">
                                                                 <table>
@@ -402,15 +426,25 @@
                                         <div class="panel-body">
                                             <form class="form form-vertical">
 
-                                                <div class="btn-group" style="width:300px;min-width: 300px">
-                                                    <button id="removeAllProducts" type="button" class="btn btn-default btn-primary" style="min-width: 120px" onclick="toggleRemove(this.id);">
-                                                        Remove All
-                                                    </button>
-                                                    <button id="removeSelectProducts" type="button" class="btn btn-default" style="min-width: 120px" onclick="toggleRemove(this.id);">
-                                                        Remove Select
-                                                    </button>
-                                                </div>
+                                                <table style="width: 100%">
+                                                    <tr>
+                                                        <td>
+                                                            <div class="btn-group" style="width:300px;min-width: 300px">
+                                                                <button id="removeAllProducts" type="button" class="btn btn-default btn-primary" style="min-width: 120px" onclick="toggleRemove(this.id);">
+                                                                    Remove All
+                                                                </button>
+                                                                <button id="removeSelectProducts" type="button" class="btn btn-default" style="min-width: 120px" onclick="toggleRemove(this.id);">
+                                                                    Remove Select
+                                                                </button>
+                                                            </div>
+                                                        </td>
+                                                        <td style="width: 30px;text-align: center;cursor:pointer;">
+                                                            <a data-toggle="modal" data-target="#removeproductsModal" class="glyphicon glyphicon-info-sign"></a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
                                                 
+
                                                 <br />
                                                 <br />
 
@@ -538,25 +572,60 @@
                                                 <br />
 
                                                 <div class="control-group">
-                                                    <label>UpdatePath</label>
+                                                    <table>
+                                                        <tr>
+                                                            <td>
+                                                                <label>UpdatePath</label>
+                                                            </td>
+                                                            <td style="width: 30px;text-align: center;cursor:pointer;">
+                                                                <a data-toggle="modal" data-target="#updatepathModal" class="glyphicon glyphicon-info-sign"></a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    
                                                     <div class="controls">
                                                         <input id="txtUpdatePath" type="text" class="form-control" placeholder="">
                                                     </div>
                                                 </div>
 
                                                 <div class="control-group" style="padding-top: 5px;">
-                                                    <label>
-                                                        TargetVersion
-                                                    </label>
+                                                    <table>
+                                                        <tr>
+                                                            <td>
+                                                                <label>TargetVersion</label>
+                                                            </td>
+                                                            <td style="width: 30px;text-align: center;cursor:pointer;">
+                                                                <a data-toggle="modal" data-target="#targetversionModal" class="glyphicon glyphicon-info-sign"></a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+
                                                     <div class="controls">
                                                         <input id="txtTargetVersion" type="text" class="form-control" placeholder="">
                                                     </div>
                                                 </div>
 
                                                 <div class="control-group" style="padding-top: 5px;">
-                                                    <label>Deadline</label>
+                                                    <table>
+                                                        <tr>
+                                                            <td>
+                                                                <label>Deadline</label>
+                                                            </td>
+                                                            <td style="width: 30px;text-align: center;cursor:pointer;">
+                                                                <a data-toggle="modal" data-target="#deadlineModal" class="glyphicon glyphicon-info-sign"></a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    
+
                                                     <div class="controls">
-                                                        <input id="txtDeadline" type="text" class="form-control" placeholder="">
+                                                        <div class='input-group date' id='txtDeadline'>
+                                                            <input type='text' class="form-control" />
+                                                            <span class="input-group-addon">
+                                                                <span class="glyphicon glyphicon-calendar"></span>
+                                                            </span>
+                                                        </div>
+
                                                     </div>
                                                 </div>
 
@@ -762,7 +831,7 @@
                                     <h4>Office Product</h4>
                                     <p>Specifies the Click-to-Run product to install.</p>
                                     <hr>
-                                    <p>Required. <strong>ID</strong> must be set to a valid ProductRelease ID.</p> <p>The supported ProductRelease IDs for Click-to-Run for Office 365 products are as follows:</p> <ul><li> <p>O365ProPlusRetail</p> </li><li> <p>VisioProRetail</p> </li><li> <p>ProjectProRetail</p> </li><li> <p>SPDRetail (SharePoint Designer)</p> </li></ul> <p>If <strong>ID</strong> is not set, the operation fails and indicates that the input is not valid.</p> <p>The order of <strong>Product</strong> elements determines the order in which the products are installed. The first <strong>Product ID</strong> is used to determine in which context the Microsoft Office First Run Experience application starts. Microsoft Office First Run Experience refers to the first time each Office application starts.</p>
+                                    <p>Required. <strong>ID</strong> must be set to a valid ProductRelease ID.</p> <p>The supported ProductRelease IDs for Click-to-Run for Office 365 products are as follows:</p> <ul><li> <p>O365ProPlusRetail</p> </li> <li> <p>O365BusinessRetail</p> </li>  <li> <p>VisioProRetail</p> </li><li> <p>ProjectProRetail</p> </li><li> <p>SPDRetail (SharePoint Designer)</p> </li></ul> <p>If <strong>ID</strong> is not set, the operation fails and indicates that the input is not valid.</p> <p>The order of <strong>Product</strong> elements determines the order in which the products are installed. The first <strong>Product ID</strong> is used to determine in which context the Microsoft Office First Run Experience application starts. Microsoft Office First Run Experience refers to the first time each Office application starts.</p>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -866,6 +935,171 @@
                             </div>
                         </div>
                     </div>
+                    
+                    <!-- PIDKEY Modal -->
+                    <div class="modal fade" id="pidkeyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">Help</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <h4>PIDKEY</h4>
+                                    <p>The 25-character volume license key.</p>
+                                    <hr>
+                                    <p>Optional. </p> 
+                                    
+                                    <p>When the <strong>PIDKEY</strong> value is set, users are not required to enter a product key when they install Office.</p>
+                                    
+                                    <p>If this element is not defined, the default settings are used. If an invalid value is specified, Setup ends the installation. </p> <p>If the <strong>Level</strong> attribute is set to "basic" or “none” and you supply a product key by using the <a href="#ElementPIDKEY">PIDKEY</a>, Setup assumes that you also accept the license agreement on behalf of the user.</p></div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- ExcludeApp Modal -->
+                    <div class="modal fade" id="excludeappModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">Help</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <h4>ExcludeApp</h4>
+                                    <p>Specifies which Office programs not to install.</p>
+                                    <hr>
+                                    <p>Optional. </p>
+                                    <p>The following is a list of the supported values for <strong>ID</strong>:</p> <ul><li> <p>Access</p> </li><li> <p>Excel</p> </li><li> <p>Groove</p> </li><li> <p>InfoPath</p> </li><li> <p>Lync</p> </li><li> <p>OneNote</p> </li><li> <p>Outlook</p> </li><li> <p>PowerPoint</p> </li><li> <p>Project</p> </li><li> <p>Publisher</p> </li><li> <p>SharePointDesigner</p> </li><li> <p>Visio</p> </li><li> <p>Word</p> </li></ul> <p>The value “Groove” is used to exclude OneDrive for Business.</p> <p>The value "Lync" also applies to Skype for Business.</p> </td> </tr> </table> <p>The following example shows how to install the 32-bit edition of Office 365 ProPlus in English, without Access or InfoPath.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- RemoveProducts Modal -->
+                    <div class="modal fade" id="removeproductsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">Help</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <h4>Remove Products</h4>
+                                    <p>Removes products and languages.</p>
+                                    <hr>
+                                    
+                                    
+                                    <div id="DIV_1">
+                                        <table id="TABLE_2">
+                                            <tbody id="TBODY_3">
+                                                <tr id="TR_4">
+                                                    <th id="TH_5">
+                                                        <img id="IMG_6" alt="Important" src="https://i-technet.sec.s-msft.com/areas/global/content/clear.gif" /><strong id="STRONG_7">Important:</strong>
+                                                    </th>
+                                                </tr>
+                                                <tr id="TR_8">
+                                                    <td id="TD_9">
+                                                        To remove an installed language for a product, you must specify the ID for the product, and specify the ID for the language that you want to remove. To remove a product completely, you must specify the ID for the product, and specify the IDs of all the languages that are installed. But, if the product and languages are also specified in the <a href="#BKMK_AddElement" id="A_10">Add element</a> of the configuration.xml file, then the product or languages won’t be removed.<br id="BR_11" /> If <strong id="STRONG_12">All</strong> is set to <strong id="STRONG_13">TRUE</strong>, then all products and languages are removed, regardless of what is specified in the <a href="#BKMK_AddElement" id="A_14">Add element</a>.
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    
+                                    
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- UpdatePath Modal -->
+                    <div class="modal fade" id="updatepathModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">Help</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <h4>Update Path</h4>
+                                    <p>Specifies a network, local, or HTTP path of a Click-to-Run source.</p>
+                                    <hr>
+                                    Optional. 
+                                    <br/>
+                                    <br />
+                                    If <strong id="STRONG_3">UpdatePath</strong> is not set, Click-to-Run installations obtain updates from the Microsoft Click-to-Run source (Content Delivery Network or CDN). This is by default. If <strong id="STRONG_5">UpdatePath</strong> is set to empty (""), updates are obtained from the Microsoft Click-to-Run source, CDN. <strong id="STRONG_7">UpdatePath</strong> can specify a network, local, or HTTP path of a Click-to-Run source. Environment variables can be used for network or local paths. If you use Group Policy and the <a href="http://go.microsoft.com/fwlink/p/?LinkID=257051" id="A_10">Office 2013 Administrative Template files (ADMX/ADML)</a>, you can set <strong id="STRONG_11">UpdatePath</strong> by using the <strong id="STRONG_12">Update Path</strong> policy setting. You can find this policy setting under Computer Configuration\Administrative Templates\Microsoft Office 2013 (Machine)\Updates.
+                                   
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TargetVersion Modal -->
+                    <div class="modal fade" id="targetversionModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">Help</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <h4>Target Version</h4>
+                                    <p>The Click-to-Run product version to install.</p>
+                                    <hr>
+                                    Optional.
+                                    <br />
+                                    <br />
+                                    
+                                    If <strong id="STRONG_3">TargetVersion</strong> is not set, Click-to-Run updates to the most recent version from the Microsoft Click-to-Run source. If <strong id="STRONG_5">TargetVersion</strong> is set to empty (""), Click-to-Run updates to the latest version from the Microsoft Click-to-Run source. <strong id="STRONG_7">TargetVersion</strong> can be set to an Office build number, for example, 15.1.2.3. When the version is set, Office attempts to transition to the specified version in the next update cycle. If you use Group Policy and the <a href="http://go.microsoft.com/fwlink/p/?LinkID=257051" id="A_9">Office 2013 Administrative Template files (ADMX/ADML)</a>, you can set <strong id="STRONG_10">TargetVersion</strong> by using the <strong id="STRONG_11">Target Version</strong> policy setting. You can find this policy setting under Computer Configuration\Administrative Templates\Microsoft Office 2013 (Machine)\Updates.
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Deadline Modal -->
+                    <div class="modal fade" id="deadlineModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">Help</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <h4>Deadline</h4>
+                                    <p>Sets a deadline by when updates to Office must be applied. The deadline is specified in Coordinated Universal Time (UTC).</p>
+                                    <hr>
+                                    Optional.
+                                    <br />
+                                    <br />
+                                    
+                                    Sets a deadline by when updates to Office must be applied. The deadline is specified in Coordinated Universal Time (UTC). You can use <strong id="STRONG_4">Deadline</strong> with <strong id="STRONG_5">Target Version</strong> to make sure that Office is updated to a particular version by a particular date. We recommend that you set the deadline at least a week in the future to allow users time to install the updates. Prior to the deadline, users receive multiple reminders to install the updates. If Office isn’t updated by the deadline, users see a notification that the updates will be applied in 15 minutes. This gives users the opportunity to save the Office documents that they are working on and to close any Office programs that are open. If users don’t close the Office programs, the programs are closed automatically when the 15 minutes are up, which might result in data loss. After the Office programs are closed, the updates are applied automatically. The deadline only applies to one set of updates. If you want to use a deadline to make sure that Office is always up-to-date, you must change the deadline every time that a new update for Office is available. To use this attribute, Office must be running at least Service Pack 1 (version 15.0.4569.1507) and you must use at least version 15.0.4595.1000 of the Office Deployment Tool. If you use Group Policy and the <a href="http://go.microsoft.com/fwlink/p/?LinkID=257051" id="A_10">Office 2013 Administrative Template files (ADMX/ADML)</a>, you can set <strong id="STRONG_11">Deadline</strong> by using the <strong id="STRONG_12">Update Deadline</strong> policy setting. You can find this policy setting under Computer Configuration\Administrative Templates\Microsoft Office 2013 (Machine)\Updates.
+                                    
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
 
                 </div>
             </div>
@@ -877,13 +1111,35 @@
     <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type='text/javascript' src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./Scripts/FileSaver.js"></script>
+    
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/scripts/moment.min.js"></script>
+    <script type="text/javascript" src="/scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/scripts/bootstrap-datetimepicker.js"></script>
+    <!-- include your less or built css files  -->
+    <!--
+        bootstrap-datetimepicker-build.less will pull in "../bootstrap/variables.less" and "bootstrap-datetimepicker.less";
+        or
+
+        -->
+    <link rel="stylesheet" href="/Content/bootstrap-datetimepicker.css" />
 
 
     <!-- JavaScript jQuery code from Bootply.com editor  -->
 
     <script type='text/javascript'>
 
+        var selectDate;
+
         $(document).ready(function () {
+
+            $('#txtDeadline').datetimepicker({
+                sideBySide: true
+            }).on("dp.change", function (e) {
+                var date = e.date; //e.date is a moment object
+                selectDate = date.format("MM/DD/YYYY HH:mm");
+                var target = $(e.target).attr('name');
+            });
 
             var fileInput = document.getElementById('fileInput');
             $("#btRemoveProduct").prop("disabled", true);
@@ -1776,7 +2032,7 @@
         function odtSaveUpdates(xmlDoc) {
             var selectUpdatePath = $("#txtUpdatePath").val();
             var selectTargetVersion = $("#txtTargetVersion").val();
-            var selectDeadline = $("#txtDeadline").val();
+            var selectDeadline = selectDate;
 
             var $btUpdatesEnabled = $("#btupdatesEnabled");
             var $btUpdatesDisabled = $("#btupdatesDisabled");
