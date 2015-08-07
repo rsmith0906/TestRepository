@@ -621,7 +621,7 @@
                                                     <div class="controls">
                                                         <input id="txtDeadline" type="text" class="form-control" placeholder="" style="display: none">
                                                         
-                                                        <div class='input-group date' id='datetimepicker1'>
+                                                        <div class='input-group date' id='txtDeadline'>
                                                             <input type='text' class="form-control" />
                                                             <span class="input-group-addon">
                                                                 <span class="glyphicon glyphicon-calendar"></span>
@@ -1126,14 +1126,14 @@
 
         $(document).ready(function () {
 
-            $('#datetimepicker1').datetimepicker();
-            $('#txtDeadline').datetimepicker({
-                sideBySide: true
-            }).on("dp.change", function (e) {
-                var date = e.date; //e.date is a moment object
-                selectDate = date.format("MM/DD/YYYY HH:mm");
-                var target = $(e.target).attr('name');
-            });
+            //$('#datetimepicker1').datetimepicker();
+            //$('#txtDeadline').datetimepicker({
+            //    sideBySide: true
+            //}).on("dp.change", function (e) {
+            //    var date = e.date; //e.date is a moment object
+            //    selectDate = date.format("MM/DD/YYYY HH:mm");
+            //    var target = $(e.target).attr('name');
+            //});
 
             var fileInput = document.getElementById('fileInput');
             $("#btRemoveProduct").prop("disabled", true);
