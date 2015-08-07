@@ -11,14 +11,14 @@
 
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
    <script type="text/javascript" src="./Scripts/vkbeautify.0.99.00.beta.js"></script>
-
+    <link rel="stylesheet" href="/Content/bootstrap-datetimepicker.css" />
 
     <!--[if lt IE 9]>
       <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <link rel="apple-touch-icon" href="/bootstrap/img/apple-touch-icon.png">
+    <!--<link rel="apple-touch-icon" href="/bootstrap/img/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/bootstrap/img/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/bootstrap/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/bootstrap/img/apple-touch-icon-114x114.png">-->
 
     <!-- CSS code from Bootply.com editor -->
 
@@ -1111,6 +1111,8 @@
     <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type='text/javascript' src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./Scripts/FileSaver.js"></script>
+    <script type="text/javascript" src="/scripts/moment.min.js"></script>
+    <script type="text/javascript" src="/scripts/bootstrap-datetimepicker.js"></script>
 
 
     <!-- JavaScript jQuery code from Bootply.com editor  -->
@@ -1119,14 +1121,14 @@
 
         $(document).ready(function () {
 
-            //$('#datetimepicker1').datetimepicker();
-            //$('#txtDeadline').datetimepicker({
-            //    sideBySide: true
-            //}).on("dp.change", function (e) {
-            //    var date = e.date; //e.date is a moment object
-            //    selectDate = date.format("MM/DD/YYYY HH:mm");
-            //    var target = $(e.target).attr('name');
-            //});
+            $('#datetimepicker1').datetimepicker();
+            $('#txtDeadline').datetimepicker({
+                sideBySide: true
+            }).on("dp.change", function (e) {
+                var date = e.date; //e.date is a moment object
+                selectDate = date.format("MM/DD/YYYY HH:mm");
+                var target = $(e.target).attr('name');
+            });
 
             var fileInput = document.getElementById('fileInput');
             $("#btRemoveProduct").prop("disabled", true);
