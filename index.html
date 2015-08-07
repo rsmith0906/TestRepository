@@ -8,9 +8,9 @@
     <meta name="generator" content="OfficeClick-To-RunXmlEditor" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="Office Click-To-Run Configuration XML Editor" />
-
-    <!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">-->
-    <link href="{{site.baseurl}}/Content/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/css/bootstrap-datepicker.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 
     <script type="text/javascript" src="./Scripts/vkbeautify.0.99.00.beta.js"></script>
     
@@ -18,9 +18,9 @@
     <!--[if lt IE 9]>
       <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <link rel="apple-touch-icon" href="/bootstrap/img/apple-touch-icon.png">
+    <!--<link rel="apple-touch-icon" href="/bootstrap/img/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/bootstrap/img/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/bootstrap/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/bootstrap/img/apple-touch-icon-114x114.png">-->
 
     <!-- CSS code from Bootply.com editor -->
 
@@ -1112,8 +1112,9 @@
 
     <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type='text/javascript' src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.15.35/js/bootstrap-datetimepicker.min.js"></script>
     <script type="text/javascript" src="./Scripts/FileSaver.js"></script>
-
 
     <!-- JavaScript jQuery code from Bootply.com editor  -->
 
@@ -1121,14 +1122,14 @@
 
         $(document).ready(function () {
 
-            //$('#datetimepicker1').datetimepicker();
-            //$('#txtDeadline').datetimepicker({
-            //    sideBySide: true
-            //}).on("dp.change", function (e) {
-            //    var date = e.date; //e.date is a moment object
-            //    selectDate = date.format("MM/DD/YYYY HH:mm");
-            //    var target = $(e.target).attr('name');
-            //});
+            $('#datetimepicker1').datetimepicker();
+            $('#txtDeadline').datetimepicker({
+                sideBySide: true
+            }).on("dp.change", function (e) {
+                var date = e.date; //e.date is a moment object
+                selectDate = date.format("MM/DD/YYYY HH:mm");
+                var target = $(e.target).attr('name');
+            });
 
             var fileInput = document.getElementById('fileInput');
             $("#btRemoveProduct").prop("disabled", true);
