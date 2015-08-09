@@ -58,16 +58,9 @@
         #cbEdition {
         }
 
-        div.alert table{border-bottom:none;border-right:none;border-collapse:separate;border-spacing:0;}div#content div.alert td,div#content div.alert th{border-top:none;border-left:none;background-clip:padding-box;}div.alert th{background-color:#ededed;font-weight:bold;}div.alert img{padding-right:5px;border:0;}div.alert p{margin:0;}
-
-        .cl_IC101471{background:url('https://i-technet.sec.s-msft.com/Areas/Epx/Content/Images/ImageSprite.png?v=635736413806036745') no-repeat scroll -1228px -3px;width:16px;height:14px;overflow:hidden;}
-
-
-
     </style>
 
 </head>
-
 
 <body>
     <div id="top-nav" class="navbar navbar-inverse navbar-static-top" style="min-width: 550px">
@@ -89,16 +82,12 @@
         </div>
     </div>
 
-    <!-- /Header -->
-    <!-- Main -->
     <div class="container-fluid">
         <div class="row">
-            <!-- /col-3 -->
             <div class="col-sm-12">
                 <div class="row">
 
                     <div class="col-md-5" style="min-width: 550px;padding-right: 40px">
-                        <!--tabs-->
                         <div class="panel">
                             <ul class="nav nav-tabs" id="myTab">
                                 <li class="active"><a href="#profile" data-toggle="tab">Add Product</a></li>
@@ -281,61 +270,91 @@
                                         
                                         <div id="collapseOne" class="panel-collapse collapse in" style="height:0">
                                             <div class="panel-body">
-                                                <form class="form form-vertical">
+                                                <form class="form form-vertical" data-toggle="validator" role="form">
 
-                                                    <div class="control-group">
-                                                        <table>
-                                                            <tr>
-                                                                <td>
-                                                                    <label>Version</label>
-                                                                </td>
-                                                                <td style="width: 30px;text-align: center;cursor:pointer;">
-                                                                    <a data-toggle="modal" data-target="#versionModal" class="glyphicon glyphicon-info-sign"></a>
-                                                                </td>
-                                                            </tr>
-                                                        </table>
+                                                    <div class="control-group" style="height: 75px;">
 
-                                                        <div class="controls">
-                                                            <input id="txtVersion" type="text" class="form-control" placeholder="15.0.4737.1003">
+                                                        <div class="controls form-group has-feedback">
+                                                            
+                                                            <table>
+                                                                <tr>
+                                                                    <td>
+                                                                        <label>Version</label>
+                                                                    </td>
+                                                                    <td style="width: 30px;text-align: center;cursor:pointer;">
+                                                                        <a data-toggle="modal" data-target="#versionModal" class="glyphicon glyphicon-info-sign"></a>
+                                                                    </td>
+                                                                    <td style="height: 40px">
+                                                                        <span class="help-block with-errors" style="font-size: 12px"></span>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+
+
+                                                            <div class="input-group" style="width: 100%">
+                                                                <input id="txtVersion" type="text" pattern="^\d{2}\.\d\.\d{4}\.\d{4}$" maxlength="14"
+                                                                       style="width:100%" class="form-control" placeholder="15.0.4737.1003"
+                                                                       data-error="Invalid Version. ex: 15.0.4737.1003">
+                                                                <span id="versionSignal" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                                            </div>
+                                                            
+                                                        </div>
+
+                                                    </div>
+                                                    
+                                                    <div class="control-group" style="height: 75px;width: 100%">
+                                                        <div class="controls form-group has-feedback">
+                                                            <table>
+                                                                <tr>
+                                                                    <td>
+                                                                        <label>SourcePath</label>
+                                                                    </td>
+                                                                    <td style="width: 30px;text-align: center;cursor:pointer;">
+                                                                        <a data-toggle="modal" data-target="#sourcepathModal" class="glyphicon glyphicon-info-sign"></a>
+                                                                    </td>
+                                                                    <td style="height: 40px">
+                                                                        <span class="help-block with-errors"></span>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+
+                                                            <div class="input-group" style="width: 100%">
+                                                                <input id="txtSourcePath" type="text" pattern="\\\\.*\\.*|http://.*|https://|^\w:\\.*"
+                                                                       style="width:100%" class="form-control" placeholder="Network, local, or HTTP path"
+                                                                       data-error="This must be a network, local, or HTTP path">
+                                                                <span id="sourcepathSignal" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                                            </div>
+
                                                         </div>
                                                     </div>
 
-                                                    <div class="control-group" style="padding-top: 5px;">
-                                                        <table>
-                                                            <tr>
-                                                                <td>
-                                                                    <label>SourcePath</label>
-                                                                </td>
-                                                                <td style="width: 30px;text-align: center;cursor:pointer;">
-                                                                    <a data-toggle="modal" data-target="#sourcepathModal" class="glyphicon glyphicon-info-sign"></a>
-                                                                </td>
-                                                            </tr>
-                                                        </table>
+                                                    <div class="control-group" style="height: 85px;width: 100%">
+                                                        <div class="controls form-group has-feedback">
+                                                            <table>
+                                                                <tr>
+                                                                    <td>
+                                                                        <label>PIDKEY</label>
+                                                                    </td>
+                                                                    <td style="width: 30px;text-align: center;cursor:pointer;">
+                                                                        <a data-toggle="modal" data-target="#pidkeyModal" class="glyphicon glyphicon-info-sign"></a>
+                                                                    </td>
+                                                                    <td style="height: 40px">
+                                                                        <span class="help-block with-errors"></span>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
 
-                                                        <div class="controls">
-                                                            <input id="txtSourcePath" type="text" class="form-control" placeholder="\\Fileserver\Share">
+
+                                                            <div class="input-group" style="width: 100%">
+                                                                <input id="txtPidKey" type="text" pattern="^.{5}-.{5}-.{5}-.{5}-.{5}$"
+                                                                       style="width:100%" class="form-control" placeholder="XXXXX-XXXXX-XXXXX-XXXXX-XXXXX"
+                                                                       data-error="This must be a 25-character volume license key">
+                                                                <span id="pidkeySignal" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                                            </div>
                                                         </div>
                                                     </div>
 
-                                                    <div class="control-group" style="padding-top: 5px;">
-                                                        <table>
-                                                            <tr>
-                                                                <td>
-                                                                    <label>PIDKEY</label>
-                                                                </td>
-                                                                <td style="width: 30px;text-align: center;cursor:pointer;">
-                                                                    <a data-toggle="modal" data-target="#pidkeyModal" class="glyphicon glyphicon-info-sign"></a>
-                                                                </td>
-                                                            </tr>
-                                                        </table>
-
-                                                        <div class="controls">
-                                                            <input id="txtPidKey" type="text" class="form-control" placeholder="XXXXX-XXXXX-XXXXX-XXXXX-XXXXX">
-                                                        </div>
-                                                    </div>
-
-
-                                                    <div class="control-group" style="padding-top: 5px;">
+                                                    <div class="control-group" style="height:75px">
                                                         <table>
                                                             <tr>
                                                                 <td>
@@ -385,14 +404,6 @@
                                                         </div>
                                                     </div>
 
-                                                    <br />
-
-                                                    <div class="control-group">
-                                                        <label></label>
-                                                        <div class="controls">
-
-                                                        </div>
-                                                    </div>
                                                 </form>
                                             </div>
                                         </div>
@@ -526,7 +537,11 @@
                                                         </button>
                                                     </div>
                                                 </div>
+                                                
+
+
                                             </form>
+                                            
                                         </div>
 
                                         <!--/panel content-->
@@ -544,7 +559,7 @@
                                         </div>
 
                                         <div class="panel-body">
-                                            <form class="form form-vertical">
+                                            <form class="form form-vertical" data-toggle="validator" role="form">
 
                                                 <div class="btn-group" style="width:300px">
                                                     <button id="btupdatesEnabled" type="button" class="btn btn-default" style="min-width: 120px" onclick="toggleUpdatesEnabled(this.id);">
@@ -558,37 +573,56 @@
                                                 <br />
                                                 <br />
 
+
                                                 <div class="control-group">
-                                                    <table>
-                                                        <tr>
-                                                            <td>
-                                                                <label>UpdatePath</label>
-                                                            </td>
-                                                            <td style="width: 30px;text-align: center;cursor:pointer;">
-                                                                <a data-toggle="modal" data-target="#updatepathModal" class="glyphicon glyphicon-info-sign"></a>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                    
-                                                    <div class="controls">
-                                                        <input id="txtUpdatePath" type="text" class="form-control" placeholder="">
+                                                    <div class="controls form-group has-feedback">
+                                                        <table>
+                                                            <tr>
+                                                                <td>
+                                                                    <label>UpdatePath</label>
+                                                                </td>
+                                                                <td style="width: 30px;text-align: center;cursor:pointer;">
+                                                                    <a data-toggle="modal" data-target="#updatepathModal" class="glyphicon glyphicon-info-sign"></a>
+                                                                </td>
+                                                                <td style="height: 40px">
+                                                                    <span class="help-block with-errors"></span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+
+
+                                                        <div class="input-group" style="width: 100%">
+                                                            <input id="txtUpdatePath" type="text" pattern="\\\\.*\\.*|http://.*|https://|^\w:\\.*"
+                                                                   style="width:100%" class="form-control" placeholder="Network, local, or HTTP path"
+                                                                   data-error="This must be a network, local, or HTTP path">
+                                                            <span id="updatepathSignal" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                                        </div>
                                                     </div>
                                                 </div>
 
                                                 <div class="control-group" style="padding-top: 5px;">
-                                                    <table>
-                                                        <tr>
-                                                            <td>
-                                                                <label>TargetVersion</label>
-                                                            </td>
-                                                            <td style="width: 30px;text-align: center;cursor:pointer;">
-                                                                <a data-toggle="modal" data-target="#targetversionModal" class="glyphicon glyphicon-info-sign"></a>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
+                                                    <div class="controls form-group has-feedback">
 
-                                                    <div class="controls">
-                                                        <input id="txtTargetVersion" type="text" class="form-control" placeholder="">
+                                                        <table>
+                                                            <tr>
+                                                                <td>
+                                                                    <label>TargetVersion</label>
+                                                                </td>
+                                                                <td style="width: 30px;text-align: center;cursor:pointer;">
+                                                                    <a data-toggle="modal" data-target="#targetversionModal" class="glyphicon glyphicon-info-sign"></a>
+                                                                </td>
+                                                                <td style="height: 40px">
+                                                                    <span class="help-block with-errors" style="font-size: 12px"></span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <div class="input-group" style="width: 100%">
+                                                            <input id="txtTargetVersion" type="text" pattern="^\d{2}\.\d\.\d{4}\.\d{4}$" maxlength="14"
+                                                                   style="width:100%" class="form-control" placeholder="15.0.4737.1003"
+                                                                   data-error="Invalid Version. ex: 15.0.4737.1003">
+                                                            <span id="targetversionSignal" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                                        </div>
                                                     </div>
                                                 </div>
 
@@ -604,10 +638,9 @@
                                                         </tr>
                                                     </table>
                                                     
-
                                                     <div class="controls">
                                                         <div class='input-group date' id='txtDeadline'>
-                                                            <input type='text' class="form-control" />
+                                                            <input type='text' class="form-control" id="inputDeadline" />
                                                             <span class="input-group-addon">
                                                                 <span class="glyphicon glyphicon-calendar"></span>
                                                             </span>
@@ -650,9 +683,20 @@
                                         <div class="panel-body">
                                             <form class="form form-vertical">
                                                 
-                                                <div>
-                                                    <label>Level</label>
-                                                </div>
+                                                <table>
+                                                    <tr>
+                                                        <td>
+                                                            <label>Level</label>
+                                                        </td>
+                                                        <td style="width: 30px;text-align: center;cursor:pointer;">
+                                                            <a data-toggle="modal" data-target="#levelModal" class="glyphicon glyphicon-info-sign"></a>
+                                                        </td>
+                                                        <td style="height: 40px">
+                                                            <span class="help-block with-errors" style="font-size: 12px"></span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                
                                                 <div>
                                                     <div class="btn-group" style="width:300px">
 
@@ -665,11 +709,22 @@
                                                     </div>
                                                 </div>
 
-
                                                 <br />
-                                                <div>
-                                                    <label>AcceptEULA</label>
-                                                </div>
+
+                                                <table>
+                                                    <tr>
+                                                        <td>
+                                                            <label>AcceptEULA</label>
+                                                        </td>
+                                                        <td style="width: 30px;text-align: center;cursor:pointer;">
+                                                            <a data-toggle="modal" data-target="#accepteulaModal" class="glyphicon glyphicon-info-sign"></a>
+                                                        </td>
+                                                        <td style="height: 40px">
+                                                            <span class="help-block with-errors" style="font-size: 12px"></span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+
                                                 <div>
                                                     <div class="btn-group" style="width:300px">
 
@@ -699,7 +754,6 @@
                                             </form>
                                         </div>
 
-                                        <!--/panel content-->
                                     </div>
 
                                 </div>
@@ -715,11 +769,23 @@
                                         </div>
 
                                         <div class="panel-body">
-                                            <form class="form form-vertical">
+                                            <form class="form form-vertical" data-toggle="validator" role="form">
+                                                
+                                                <table>
+                                                    <tr>
+                                                        <td>
+                                                            <label>Level</label>
+                                                        </td>
+                                                        <td style="width: 30px;text-align: center;cursor:pointer;">
+                                                            <a data-toggle="modal" data-target="#loglevelModal" class="glyphicon glyphicon-info-sign"></a>
+                                                        </td>
+                                                        <td style="height: 40px">
+                                                            <span class="help-block with-errors" style="font-size: 12px"></span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
 
-                                               <div>
-                                                    <label>Level</label>
-                                                </div>
+
                                                 <div>
                                                     <div class="btn-group" style="width:300px">
 
@@ -735,11 +801,32 @@
                                                 <br />
 
                                                 <div class="control-group">
-                                                    <label>Path</label>
-                                                    <div class="controls">
-                                                        <input id="txtLoggingUpdatePath" type="text" class="form-control" placeholder="">
+                                                    <div class="controls form-group has-feedback">
+                                                        <table>
+                                                            <tr>
+                                                                <td>
+                                                                    <label>Path</label>
+                                                                </td>
+                                                                <td style="width: 30px;text-align: center;cursor:pointer;">
+                                                                    <a data-toggle="modal" data-target="#logpathModal" class="glyphicon glyphicon-info-sign"></a>
+                                                                </td>
+                                                                <td style="height: 40px">
+                                                                    <span class="help-block with-errors"></span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+
+
+                                                        <div class="input-group" style="width: 100%">
+                                                            <input id="txtLoggingUpdatePath" type="text" pattern="^\w:\\.*"
+                                                                   style="width:100%" class="form-control" placeholder="Local Path"
+                                                                   data-error="Local Path">
+                                                            <span id="logupdatepathSignal" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                                        </div>
                                                     </div>
                                                 </div>
+
+
 
                                                 <br />
 
@@ -765,7 +852,6 @@
                             </div>
 
                         </div>
-                        <!--/tabs-->
                     </div>
 
                     <div class="col-md-7" style="min-width: 550px;padding-right: 40px">
@@ -776,36 +862,41 @@
                                         <td style="width: 200px;text-wrap:none;">
                                             <h4>XML Viewer</h4>
                                         </td>
-
-                                        <td style="padding-right:10px;text-align: right">
+                                        
+                                        <td style="text-align: right">
                                             <form id="text-options">
-                                                <input type="button" class="btn btn-default btn-primary" value="Upload" onclick="document.getElementById('fileInput').click();">
+                                                <input type="button" class="btn btn-default btn-primary" value="Reset" onclick="clearXml();">
                                             </form>
                                         </td>
 
-                                        <td style="padding-right:10px;width: 100px;text-align: right">
+                                        <td style="text-align: right;width: 80px;">
+                                            <form id="text-options">
+                                                <input type="button" class="btn btn-default btn-primary" value="Upload" onclick="clickUpload();">
+                                            </form>
+                                        </td>
+
+                                        <td style="width: 95px;text-align: right">
                                             <form id="text-options">
                                                 <input type="button" class="btn btn-default btn-primary" value="Download" onclick="download()">
                                             </form>
                                         </td>
 
                                         <td style="width:200px;display: none;width: 100px;">
-                                            <input type="file" id="fileInput" size="10">
+                                            <form id="fileUploadForm">
+                                                <input type="file" id="fileInput" size="10">
+                                             </form>
                                         </td>
 
                                     </tr>
                                 </table>
-
-
                             </div>
                             <div class="panel-body">
-                                <textarea id="xmlText" style="width:100%; min-height: 455px;font-size:20px" rows="3" placeholder=""></textarea>
+                                <textarea id="xmlText" style="width:100%; min-height: 455px;font-size:20px" rows="3" placeholder="" readonly ></textarea>
                             </div>
 
                         </div>
                     </div>
                     
-
                     <!-- Product Modal -->
                     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                         <div class="modal-dialog" role="document">
@@ -1085,23 +1176,126 @@
                             </div>
                         </div>
                     </div>
+                    
+                    <!-- Level Modal -->
+                    <div class="modal fade" id="levelModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabelLevel">Help</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <h4>Level</h4>
+                                    <p>Determines the user interface that the user sees when the operation is performed.</p>
+                                    <hr>
+                                    Optional.
+                                    <br />
+                                    <br />
 
+                                    If <strong id="STRONG_4">Level</strong> is set to <strong id="STRONG_5">None</strong>, the user sees no UI. No progress UI, completion screen, error dialog boxes, or first run automatic start UI are displayed. If <strong id="STRONG_7">Level</strong> is set to <strong id="STRONG_8">Full</strong>, the user sees the normal Click-to-Run user interface: Automatic start, application splash screen, and error dialog boxes.
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Display Level Modal -->
+                    <div class="modal fade" id="accepteulaModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabeleula">Help</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <h4>Accept Eula</h4>
+                                    <p>We recommend that administrators set AcceptEULA to TRUE.</p>
+                                    <hr>
+                                    Optional.
+                                    <br />
+                                    <br />
+
+                                    If this attribute is set to <strong id="STRONG_6">TRUE</strong>, the user does not see a Microsoft Software License Terms dialog box. If this attribute is set to <strong id="STRONG_8">FALSE</strong> or is not set, the user may see a Microsoft Software License Terms dialog box. This attribute only applies if you install with the user's account. If you use System Center Configuration Manager or some other software distribution tool which uses the SYSTEM account to install, then the setting for this attribute is not applied.
+                                    
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Log Level Modal -->
+                    <div class="modal fade" id="loglevelModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabelLogLevel">Help</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <h4>Log Level</h4>
+                                    <p>Specifies options for the logging that Click-to-Run Setup performs.</p>
+                                    <hr>
+                                    Optional.
+                                    <br />
+                                    <br />
+
+                                    The default level is Standard.
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Log Level Modal -->
+                    <div class="modal fade" id="logpathModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabelLogLevel">Help</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <h4>Log Path</h4>
+                                    <p>Specifies the fully qualified path of the folder that is used for the log file.</p>
+                                    <hr>
+                                    Optional.
+                                    <br />
+                                    <br />
+
+                                    You can use environment variables. The default is <strong id="STRONG_3">%temp%</strong>.
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
                 </div>
             </div>
-
         </div>
     </div>
-
-
+    
     <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type='text/javascript' src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.15.35/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="//1000hz.github.io/bootstrap-validator/dist/validator.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    
     <script type="text/javascript" src="./Scripts/FileSaver.js"></script>
     <script type="text/javascript" src="./Scripts/main.js"></script>
     
-
 </body>
 </html>
