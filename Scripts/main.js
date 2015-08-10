@@ -20,7 +20,9 @@ $(document).ready(function () {
         document.getElementById("fileUploadForm").reset();
 
     });
-    
+
+    document.getElementById("collapseOne").style.display = "block";
+
     $("#btRemoveProduct").prop("disabled", true);
     $("#btAddLanguage").prop("disabled", true);
     $("#btRemoveLanguage").prop("disabled", true);
@@ -42,7 +44,30 @@ $(document).ready(function () {
         $("#collapseOne").css("height", "0");
     }
 
+    $('#templateList li').click(function (e) {
+        e.preventDefault();
+        var $that = $(this);
+        var url = document.getElementById(this.id).getAttribute("href");
+        
+        var rawFile = new XMLHttpRequest();
+        rawFile.open("GET", url, true);
+        rawFile.onreadystatechange = function () {
+            if (rawFile.readyState === 4) {
+                var allText = rawFile.responseText;
+                if (allText) {
+                    $('textarea#xmlText').val(allText);
+                    loadUploadXmlFile();
+                }
+            }
+        }
+
+        rawFile.send();
+
+    });
+
     $("#collapseOne").prop("height", "auto");
+
+    setActiveTab();
 
     resizeWindow();
 
@@ -224,6 +249,28 @@ $(document).ready(function () {
         changeSelectedLanguage();
     });
 
+    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+        //e.target // activated tab
+        //e.relatedTarget // previous tab
+
+        $.cookie("activeTab", e.target);
+
+        var mainTabs = document.getElementById("myTab");
+        if (mainTabs) {
+            var target = $(e.target).attr("href");
+            var liItems = mainTabs.getElementsByTagName("li");
+            if (liItems) {
+                
+                for (var i = 0; i < liItems.length; i++) {
+                    var liItem = liItems[i];
+                    if ($("#" + liItem.id).hasClass("active")) {
+                        
+                    }
+                }
+            }
+        }
+    });
+
     $("#btAddExcludeApp").button().click(function () {
         var xmlDoc = getXmlDocument();
 
@@ -334,9 +381,20 @@ $(document).ready(function () {
 
 });
 
+function setActiveTab() {
+    var activeTab = $.cookie("activeTab");
+
+    if (activeTab) {
+        if (activeTab.indexOf('#') > -1) {
+            var tabSplit = activeTab.split('#');
+            activeTab = tabSplit[tabSplit.length - 1];
+        }
+        $('[data-toggle="tab"][href="#' + activeTab + '"]').tab('show');
+    }
+}
+
 function clickUpload() {
     var finput = document.getElementById('fileInput');
-
     finput.click();
 }
 
@@ -348,7 +406,6 @@ function fileUploaded(e) {
     var file = files[i];
 
     var reader = new FileReader();
-
     reader.onload = function (event) {
         var contents = event.target.result;
         var xmlOutput = vkbeautify.xml(contents);
@@ -357,11 +414,9 @@ function fileUploaded(e) {
 
         loadUploadXmlFile();
     };
-
     reader.onerror = function (event) {
         throw "File could not be read! Code " + event.target.error.code;
     };
-
     reader.readAsText(file);
 }
 

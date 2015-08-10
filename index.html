@@ -58,6 +58,11 @@
         #cbEdition {
         }
 
+        .infoButton {
+
+            color: #787878;
+        }
+
     </style>
 
 </head>
@@ -90,11 +95,12 @@
                     <div class="col-md-5" style="min-width: 550px;padding-right: 40px">
                         <div class="panel">
                             <ul class="nav nav-tabs" id="myTab">
-                                <li class="active"><a href="#profile" data-toggle="tab">Add Product</a></li>
-                                <li><a href="#removeproduct" data-toggle="tab">Remove Product</a></li>
-                                <li><a href="#updates" data-toggle="tab">Updates</a></li>
-                                <li><a href="#display" data-toggle="tab">Display</a></li>
-                                <li><a href="#logging" data-toggle="tab">Logging</a></li>
+                                <li id="tabAddProduct" class="active"><a href="#profile" data-toggle="tab">Add Product</a></li>
+                                <li id="tabRemoveProduct"><a href="#removeproduct" data-toggle="tab">Remove Product</a></li>
+                                <li id="tabUpdates"><a href="#updates" data-toggle="tab">Updates</a></li>
+                                <li id="tabDisplay"><a href="#display" data-toggle="tab">Display</a></li>
+                                <li id="tabLogging"><a href="#logging" data-toggle="tab">Logging</a></li>
+                                <li id="tabTemplates"><a href="#templates" data-toggle="tab">Templates</a></li>
                             </ul>
                             <div class="tab-content">
 
@@ -117,7 +123,7 @@
                                                                 <label>Product</label>
                                                             </td>
                                                             <td style="width: 30px;text-align: center;cursor:pointer;">
-                                                                <a data-toggle="modal" data-target="#myModal" class="glyphicon glyphicon-info-sign"></a>
+                                                                <a data-toggle="modal" data-target="#myModal" class="glyphicon glyphicon-info-sign infoButton"></a>
                                                             </td>
                                                         </tr>
                                                     </table>
@@ -141,7 +147,7 @@
                                                                 <label>Edition</label>
                                                             </td>
                                                             <td style="width: 30px;text-align: center;cursor:pointer;">
-                                                                <a data-toggle="modal" data-target="#bitnessModal" class="glyphicon glyphicon-info-sign"></a>
+                                                                <a data-toggle="modal" data-target="#bitnessModal" class="glyphicon glyphicon-info-sign infoButton"></a>
                                                             </td>
                                                         </tr>
                                                     </table>
@@ -161,7 +167,7 @@
                                                                 <label>Language</label>
                                                             </td>
                                                             <td style="width: 30px;text-align: center;cursor:pointer;">
-                                                                <a data-toggle="modal" data-target="#languageModal" class="glyphicon glyphicon-info-sign"></a>
+                                                                <a data-toggle="modal" data-target="#languageModal" class="glyphicon glyphicon-info-sign infoButton"></a>
                                                             </td>
                                                         </tr>
                                                     </table>
@@ -268,7 +274,7 @@
                                             </div>
                                         </div>
                                         
-                                        <div id="collapseOne" class="panel-collapse collapse in" style="height:0">
+                                        <div id="collapseOne" class="panel-collapse collapse in" style="height:0;display:none;">
                                             <div class="panel-body">
                                                 <form class="form form-vertical" data-toggle="validator" role="form">
 
@@ -282,7 +288,7 @@
                                                                         <label>Version</label>
                                                                     </td>
                                                                     <td style="width: 30px;text-align: center;cursor:pointer;">
-                                                                        <a data-toggle="modal" data-target="#versionModal" class="glyphicon glyphicon-info-sign"></a>
+                                                                        <a data-toggle="modal" data-target="#versionModal" class="glyphicon glyphicon-info-sign infoButton"></a>
                                                                     </td>
                                                                     <td style="height: 40px">
                                                                         <span class="help-block with-errors" style="font-size: 12px"></span>
@@ -310,7 +316,7 @@
                                                                         <label>SourcePath</label>
                                                                     </td>
                                                                     <td style="width: 30px;text-align: center;cursor:pointer;">
-                                                                        <a data-toggle="modal" data-target="#sourcepathModal" class="glyphicon glyphicon-info-sign"></a>
+                                                                        <a data-toggle="modal" data-target="#sourcepathModal" class="glyphicon glyphicon-info-sign infoButton"></a>
                                                                     </td>
                                                                     <td style="height: 40px">
                                                                         <span class="help-block with-errors"></span>
@@ -336,7 +342,7 @@
                                                                         <label>PIDKEY</label>
                                                                     </td>
                                                                     <td style="width: 30px;text-align: center;cursor:pointer;">
-                                                                        <a data-toggle="modal" data-target="#pidkeyModal" class="glyphicon glyphicon-info-sign"></a>
+                                                                        <a data-toggle="modal" data-target="#pidkeyModal" class="glyphicon glyphicon-info-sign infoButton"></a>
                                                                     </td>
                                                                     <td style="height: 40px">
                                                                         <span class="help-block with-errors"></span>
@@ -361,7 +367,7 @@
                                                                     <label>Exclude Office Programs</label>
                                                                 </td>
                                                                 <td style="width: 30px;text-align: center;cursor:pointer;">
-                                                                    <a data-toggle="modal" data-target="#excludeappModal" class="glyphicon glyphicon-info-sign"></a>
+                                                                    <a data-toggle="modal" data-target="#excludeappModal" class="glyphicon glyphicon-info-sign infoButton"></a>
                                                                 </td>
                                                             </tr>
                                                         </table>
@@ -437,7 +443,7 @@
                                                             </div>
                                                         </td>
                                                         <td style="width: 30px;text-align: center;cursor:pointer;">
-                                                            <a data-toggle="modal" data-target="#removeproductsModal" class="glyphicon glyphicon-info-sign"></a>
+                                                            <a data-toggle="modal" data-target="#removeproductsModal" class="glyphicon glyphicon-info-sign infoButton"></a>
                                                         </td>
                                                     </tr>
                                                 </table>
@@ -582,7 +588,7 @@
                                                                     <label>UpdatePath</label>
                                                                 </td>
                                                                 <td style="width: 30px;text-align: center;cursor:pointer;">
-                                                                    <a data-toggle="modal" data-target="#updatepathModal" class="glyphicon glyphicon-info-sign"></a>
+                                                                    <a data-toggle="modal" data-target="#updatepathModal" class="glyphicon glyphicon-info-sign infoButton"></a>
                                                                 </td>
                                                                 <td style="height: 40px">
                                                                     <span class="help-block with-errors"></span>
@@ -609,7 +615,7 @@
                                                                     <label>TargetVersion</label>
                                                                 </td>
                                                                 <td style="width: 30px;text-align: center;cursor:pointer;">
-                                                                    <a data-toggle="modal" data-target="#targetversionModal" class="glyphicon glyphicon-info-sign"></a>
+                                                                    <a data-toggle="modal" data-target="#targetversionModal" class="glyphicon glyphicon-info-sign infoButton"></a>
                                                                 </td>
                                                                 <td style="height: 40px">
                                                                     <span class="help-block with-errors" style="font-size: 12px"></span>
@@ -633,7 +639,7 @@
                                                                 <label>Deadline</label>
                                                             </td>
                                                             <td style="width: 30px;text-align: center;cursor:pointer;">
-                                                                <a data-toggle="modal" data-target="#deadlineModal" class="glyphicon glyphicon-info-sign"></a>
+                                                                <a data-toggle="modal" data-target="#deadlineModal" class="glyphicon glyphicon-info-sign infoButton"></a>
                                                             </td>
                                                         </tr>
                                                     </table>
@@ -689,7 +695,7 @@
                                                             <label>Level</label>
                                                         </td>
                                                         <td style="width: 30px;text-align: center;cursor:pointer;">
-                                                            <a data-toggle="modal" data-target="#levelModal" class="glyphicon glyphicon-info-sign"></a>
+                                                            <a data-toggle="modal" data-target="#levelModal" class="glyphicon glyphicon-info-sign infoButton"></a>
                                                         </td>
                                                         <td style="height: 40px">
                                                             <span class="help-block with-errors" style="font-size: 12px"></span>
@@ -717,7 +723,7 @@
                                                             <label>AcceptEULA</label>
                                                         </td>
                                                         <td style="width: 30px;text-align: center;cursor:pointer;">
-                                                            <a data-toggle="modal" data-target="#accepteulaModal" class="glyphicon glyphicon-info-sign"></a>
+                                                            <a data-toggle="modal" data-target="#accepteulaModal" class="glyphicon glyphicon-info-sign infoButton"></a>
                                                         </td>
                                                         <td style="height: 40px">
                                                             <span class="help-block with-errors" style="font-size: 12px"></span>
@@ -777,7 +783,7 @@
                                                             <label>Level</label>
                                                         </td>
                                                         <td style="width: 30px;text-align: center;cursor:pointer;">
-                                                            <a data-toggle="modal" data-target="#loglevelModal" class="glyphicon glyphicon-info-sign"></a>
+                                                            <a data-toggle="modal" data-target="#loglevelModal" class="glyphicon glyphicon-info-sign infoButton"></a>
                                                         </td>
                                                         <td style="height: 40px">
                                                             <span class="help-block with-errors" style="font-size: 12px"></span>
@@ -808,7 +814,7 @@
                                                                     <label>Path</label>
                                                                 </td>
                                                                 <td style="width: 30px;text-align: center;cursor:pointer;">
-                                                                    <a data-toggle="modal" data-target="#logpathModal" class="glyphicon glyphicon-info-sign"></a>
+                                                                    <a data-toggle="modal" data-target="#logpathModal" class="glyphicon glyphicon-info-sign infoButton"></a>
                                                                 </td>
                                                                 <td style="height: 40px">
                                                                     <span class="help-block with-errors"></span>
@@ -848,6 +854,31 @@
                                     </div>
 
                                 </div>
+                                
+                                <!-- Templates-->
+                                <div class="tab-pane well" id="templates">
+
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <div class="panel-title">
+                                                <h4>Templates</h4>
+                                            </div>
+                                        </div>
+
+                                        <div class="panel-body">
+                                            <form class="form form-vertical" data-toggle="validator" role="form">
+                                                <ul id="templateList" class="list-group">
+                                                    <li id="proPlusRetail" href="./templates/0365ProPlusRetail.xml" class="list-group-item">Office 365 ProPlus Retail</li>
+                                                    <li id="proPlusBusiness" href="./templates/0365ProPlusBusiness.xml" class="list-group-item">Office 365 ProPlus Business</li>
+                                                    <li id="proPlusRetailVisio" href="./templates/O365ProPlusRetailwVisio.xml" class="list-group-item">Office 365 ProPlus Retail with Visio</li>
+                                                </ul>
+                                                
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                </div>
+
 
                             </div>
 
@@ -1293,7 +1324,8 @@
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.15.35/js/bootstrap-datetimepicker.min.js"></script>
     <script type="text/javascript" src="//1000hz.github.io/bootstrap-validator/dist/validator.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
-    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/bootstrap.listgroup/1.1.2/listgroup.min.js"></script>
+
     <script type="text/javascript" src="./Scripts/FileSaver.js"></script>
     <script type="text/javascript" src="./Scripts/main.js"></script>
     
